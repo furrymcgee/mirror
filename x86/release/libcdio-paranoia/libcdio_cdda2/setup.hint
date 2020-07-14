@@ -1,0 +1,7 @@
+category: Audio
+requires: cygwin libcdio16 
+sdesc: "CD-ROM control library (CD-DA runtime)"
+ldesc: "This CDDA reader distribution reads audio from the CD-ROM directly
+as data, with no analog step between, and writes the data to a file or pipe as
+.wav, .aifc or as raw 16 bit linear PCM."
+external-source: libcdio-paranoia

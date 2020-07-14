@@ -1,0 +1,5 @@
+category: Libs
+requires: damageproto libX11-devel libXau-devel libxcb-devel libXdamage1 libXdmcp-devel libXfixes-devel xproto 
+sdesc: "X.Org Xdamage library"
+ldesc: "X.Org Xdamage library"
+external-source: libXdamage

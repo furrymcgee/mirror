@@ -1,0 +1,4 @@
+category: Devel
+requires:  
+sdesc: "X.Org X extension headers"
+ldesc: "X.Org X extension headers"

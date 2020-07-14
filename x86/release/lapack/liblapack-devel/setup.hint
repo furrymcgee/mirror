@@ -1,0 +1,5 @@
+category: Libs Math
+requires: liblapack0 pkg-config 
+sdesc: "LAPACK library for linear algebra operations"
+ldesc: "Comprehensive FORTRAN library for linear algebra operations."
+external-source: lapack

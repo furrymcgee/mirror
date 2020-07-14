@@ -1,0 +1,6 @@
+category: Libs
+requires: girepository-GLib2.0 
+sdesc: "GObject Introspection data for X11 libraries"
+ldesc: "The goal of the project is to describe GObject APIs and collect
+them in a uniform, machine readable format."
+external-source: gobject-introspection

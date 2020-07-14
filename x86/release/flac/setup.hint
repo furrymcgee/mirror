@@ -1,0 +1,4 @@
+category: Audio
+requires: libFLAC8 libgcc1 libiconv2 cygwin
+sdesc: "Free Lossless Audio Codec"
+ldesc: "FLAC is an Open Source lossless audio codec developed by Josh Coalson."

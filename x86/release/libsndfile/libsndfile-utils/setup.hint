@@ -1,0 +1,6 @@
+category: Audio
+requires: cygwin libgcc1 libsndfile1 libsqlite3_0 
+sdesc: "Sampled audio data utilities"
+ldesc: "libsndfile is a library of C routines for reading and writing
+files containing sampled audio data."
+external-source: libsndfile

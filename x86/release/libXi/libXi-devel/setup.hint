@@ -1,0 +1,5 @@
+category: Libs
+requires: inputproto libX11-devel libXext-devel libXfixes-devel libXi6 pkg-config 
+sdesc: "X Input library"
+ldesc: "X.Org X Input library"
+external-source: libXi

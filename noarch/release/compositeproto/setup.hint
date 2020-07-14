@@ -1,0 +1,4 @@
+category: X11
+requires: fixesproto xproto
+sdesc: "X.Org Composite extension headers"
+ldesc: "X.Org Composite extension headers"

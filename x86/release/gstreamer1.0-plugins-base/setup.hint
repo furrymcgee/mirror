@@ -1,0 +1,8 @@
+category: Audio Video
+requires: cygwin libcairo2 libcdio_cdda2 libcdio_paranoia2 libgcc1 libglib2.0_0 libgstinterfaces1.0_0 libgstreamer1.0_0 libintl8 libogg0 liborc0.4_0 libpango1.0_0 libtheoradec1 libtheoraenc1 libvorbis0 libvorbisenc2 libX11_6 libXext6 
+sdesc: "GStreamer 1.0 Base Plug-ins"
+ldesc: "GStreamer Base Plug-ins is a well-groomed and well-maintained
+collection of GStreamer plug-ins and elements, spanning the range of possible
+types of elements one would want to write for GStreamer. It also contains
+helper libraries and base classes useful for writing elements. A wide range
+of video and audio decoders, encoders, and filters are included."

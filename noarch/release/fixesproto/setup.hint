@@ -1,0 +1,4 @@
+category: X11
+requires: xproto xextproto
+sdesc: "X.Org XFixes extension headers"
+ldesc: "X.Org XFixes extension headers"

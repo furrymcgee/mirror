@@ -1,0 +1,9 @@
+category: Libs
+requires: cygwin libgcc1 libglib2.0_0 libgstreamer1.0_0 libintl8 liborc0.4_0 zlib0 iso-codes
+sdesc: "GStreamer 1.0 Base Plug-ins"
+ldesc: "GStreamer Base Plug-ins is a well-groomed and well-maintained
+collection of GStreamer plug-ins and elements, spanning the range of possible
+types of elements one would want to write for GStreamer. It also contains
+helper libraries and base classes useful for writing elements. A wide range
+of video and audio decoders, encoders, and filters are included."
+external-source: gstreamer1.0-plugins-base

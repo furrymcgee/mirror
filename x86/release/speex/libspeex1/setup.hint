@@ -1,0 +1,8 @@
+sdesc: "An open-source, patent-free speech codec (Runtime)"
+ldesc: "Speex is a patent-free audio codec designed especially for voice
+(unlike Vorbis which targets general audio) signals and providing good
+narrowband and wideband quality. This project aims to be complementary to
+the Vorbis codec."
+category: Audio Libs
+requires: cygwin
+external-source: speex

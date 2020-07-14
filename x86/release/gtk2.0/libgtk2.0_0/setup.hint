@@ -1,0 +1,7 @@
+category: Libs
+requires: cygwin libatk1.0_0 libcairo2 libfontconfig1 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libintl8 libpango1.0_0 libX11_6 libXcomposite1 libXcursor1 libXdamage1 libXext6 libXfixes3 libXi6 libXinerama1 libXrandr2 libXrender1 adwaita-icon-theme gtk-update-icon-cache
+sdesc: "GTK+ X11 GUI toolkit (runtime)"
+ldesc: "Offering a complete set of widgets, GTK+ is suitable for
+projects ranging from small one-off projects to complete application
+suites."
+external-source: gtk2.0

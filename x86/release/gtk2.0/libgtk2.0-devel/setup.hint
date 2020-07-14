@@ -1,0 +1,7 @@
+category: Libs
+requires: libatk1.0-devel libcairo-devel libfontconfig-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk2.0_0 libpango1.0-devel libX11-devel libXcomposite-devel libXcursor-devel libXdamage-devel libXext-devel libXfixes-devel libXi-devel libXinerama-devel libXrandr-devel libXrender-devel pkg-config python 
+sdesc: "GTK+ X11 GUI toolkit (development)"
+ldesc: "Offering a complete set of widgets, GTK+ is suitable for
+projects ranging from small one-off projects to complete application
+suites."
+external-source: gtk2.0

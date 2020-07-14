@@ -1,0 +1,9 @@
+category: Audio
+requires: libgcc1 cygwin
+external-source: wavpack
+sdesc: "Hybrid lossless audio codec (runtime library)"
+ldesc: "WavPack is a completely open audio compression format providing
+lossless, high-quality lossy, and a unique hybrid compression mode.
+Although the technology is loosely based on previous versions of
+WavPack, the new version 4 format has been designed from the ground up
+to offer unparalleled performance and functionality."

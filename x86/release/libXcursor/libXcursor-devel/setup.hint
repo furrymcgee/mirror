@@ -1,0 +1,5 @@
+category: Libs
+requires: libX11-devel libXau-devel libxcb-devel libXcursor1 libXdmcp-devel libXfixes-devel libXrender-devel xproto 
+sdesc: "X.Org Xcursor library"
+ldesc: "X.Org Xcursor library"
+external-source: libXcursor

@@ -1,0 +1,5 @@
+category: Libs
+requires: libX11-devel libXau-devel libxcb-devel libXdmcp-devel libXext-devel libXinerama1 xineramaproto 
+sdesc: "X.Org Xinerama library"
+ldesc: "X.Org Xinerama library"
+external-source: libXinerama

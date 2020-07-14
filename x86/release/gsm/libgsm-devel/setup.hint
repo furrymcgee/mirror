@@ -1,0 +1,8 @@
+category: Libs
+requires: libgsm1 
+sdesc: "GSM 06.10 speech compression library"
+ldesc: "A C library implementation of the European GSM 06.10 provisional
+standard for full-rate speech transcoding, prI-ETS 300 036, which uses
+RPE/LTP (residual pulse excitation/long term prediction) coding at 13
+kbit/s."
+external-source: gsm

@@ -1,0 +1,5 @@
+category: Libs
+requires: libglib2.0-devel libgraphite2-devel libharfbuzz0 pkg-config libfreetype-devel libglib2.0-devel
+sdesc: "OpenType text shaping engine"
+ldesc: "HarfBuzz is an OpenType text shaping engine."
+external-source: harfbuzz

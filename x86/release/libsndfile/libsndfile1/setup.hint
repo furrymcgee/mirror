@@ -1,0 +1,6 @@
+category: Libs
+requires: cygwin libFLAC8 libgcc1 libgsm1 libogg0 libvorbis0 libvorbisenc2 
+sdesc: "Sampled audio data library"
+ldesc: "libsndfile is a library of C routines for reading and writing
+files containing sampled audio data."
+external-source: libsndfile

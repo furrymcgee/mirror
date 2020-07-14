@@ -1,0 +1,4 @@
+category: Devel
+requires:  
+sdesc: "X.Org XInput extension headers"
+ldesc: "X.Org XInput extension headers"

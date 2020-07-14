@@ -1,0 +1,4 @@
+category: X11
+requires: xproto fixesproto
+sdesc: "X.Org XDamage prototype headers"
+ldesc: "X.Org XDamage prototype headers"

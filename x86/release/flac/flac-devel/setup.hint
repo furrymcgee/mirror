@@ -1,0 +1,5 @@
+category: Audio Libs Devel
+requires: cygwin-devel libFLAC++6 libFLAC8 libogg-devel 
+sdesc: "Free Lossless Audio Codec (development)"
+ldesc: "FLAC is an Open Source lossless audio codec developed by Josh Coalson."
+external-source: flac

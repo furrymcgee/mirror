@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="moc"
+VERSION="2.6.0~svn-3"
+RELEASE=1
+CATEGORY="sound"
+SUMMARY="ncurses based console audio player"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/m/moc/moc_2.6.0~svn-r2994-3.dsc http://ftp.debian.org/debian/pool/main/m/moc/moc_2.6.0~svn-r2994.orig.tar.xz http://ftp.debian.org/debian/pool/main/m/moc/moc_2.6.0~svn-r2994-3.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="moc.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libasound2 libc6 libcurl3-gnutls libdb5.3 libfaad2 libflac8 libgcc1 libid3tag0  libltdl7 libmad0 libmagic1 libmodplug1 libmpcdec6 libncursesw6 libogg0 libopusfile0 libpopt0 librcc0 libresid-builder0c2a libsamplerate0 libsidplay2 libsidutils0 libsndfile1 libspeex1 libstdc++6 libtagc0 libtinfo6 libvorbis0a libvorbisfile3 libwavpack1 zlib1g"
+
+inherit dpkg

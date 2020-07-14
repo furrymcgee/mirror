@@ -1,0 +1,7 @@
+category: Audio Libs
+requires: libogg0 libvorbis0 libvorbis cygwin
+sdesc: "The Vorbis General Audio Compression Codec (High-Level Runtime)"
+ldesc: "Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free,
+and general-purpose compressed audio format for audio and music at
+fixed and variable bitrates from 16 to 128 kbps/channel."
+external-source: libvorbis

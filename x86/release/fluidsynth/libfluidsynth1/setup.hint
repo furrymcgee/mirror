@@ -1,0 +1,6 @@
+category: Libs
+requires: libglib2.0_0 libportaudio2 libpulse-simple0 libreadline7 libsndfile1 cygwin
+sdesc: "SoundFont software synthesizer library"
+ldesc: "FluidSynth is a real-time software synthesizer based on the
+SoundFont 2 specifications."
+external-source: fluidsynth

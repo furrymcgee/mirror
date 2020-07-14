@@ -1,0 +1,37 @@
+--- src/moc/configure.in	2018-08-13 22:40:32.000000000 -0700
++++ origsrc/moc/configure.in	2020-07-09 13:24:47.919376000 -0700
+@@ -41,7 +41,7 @@
+ 
+ plugindir=$libdir/moc
+ AC_SUBST([plugindir])
+-PLUGIN_LDFLAGS='-module -avoid-version'
++PLUGIN_LDFLAGS='-module -avoid-version -no-undefined'
+ AC_SUBST([PLUGIN_LDFLAGS])
+ 
+ case "$host_os" in
+--- src/moc/debian/moc.install	2020-07-09 12:00:54.942310400 -0700
++++ origsrc/moc/debian/moc.install	2020-07-09 12:01:29.051356800 -0700
+@@ -1,13 +1,2 @@
+ usr/bin
+-usr/lib/*/moc/decoder_plugins/libaac_decoder.so
+-usr/lib/*/moc/decoder_plugins/libflac_decoder.so
+-usr/lib/*/moc/decoder_plugins/libmodplug_decoder.so
+-usr/lib/*/moc/decoder_plugins/libmp3_decoder.so
+-usr/lib/*/moc/decoder_plugins/libmusepack_decoder.so
+-usr/lib/*/moc/decoder_plugins/libopus_decoder.so
+-usr/lib/*/moc/decoder_plugins/libsidplay2_decoder.so
+-usr/lib/*/moc/decoder_plugins/libsndfile_decoder.so
+-usr/lib/*/moc/decoder_plugins/libspeex_decoder.so
+-usr/lib/*/moc/decoder_plugins/libvorbis_decoder.so
+-usr/lib/*/moc/decoder_plugins/libwavpack_decoder.so
+ usr/share
+--- src/moc/debian/rules	2020-07-09 12:46:33.179702400 -0700
++++ origsrc/moc/debian/rules	2020-07-09 12:39:43.921217600 -0700
+@@ -3,6 +3,7 @@
+ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+ export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
++export PKG_CONFIG_PATH?=/usr/lib/i386-pc-cygwin/pkgconfig/
+ 
+ %:
+ 	dh $@

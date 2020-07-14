@@ -1,0 +1,7 @@
+category: Audio
+requires: libespeak1 cygwin
+sdesc: "eSpeak text-to-speech engine"
+ldesc: "eSpeak is a compact open source software speech synthesizer for
+English and other languages, for Linux and Windows. eSpeak produces good
+quality English speech. It uses a different synthesis method from other open
+source TTS engines, and sounds quite different."

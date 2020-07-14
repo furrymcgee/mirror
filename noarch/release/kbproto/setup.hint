@@ -1,0 +1,4 @@
+category: Devel
+requires: pkg-config xproto
+sdesc: "X.Org XKB extension headers"
+ldesc: "X.Org XKB extension headers"

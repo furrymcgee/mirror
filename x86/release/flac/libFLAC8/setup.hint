@@ -1,0 +1,5 @@
+category: Audio Libs
+requires: libgcc1 libogg0 cygwin
+sdesc: "Free Lossless Audio Codec (C runtime)"
+ldesc: "FLAC is an Open Source lossless audio codec developed by Josh Coalson."
+external-source: flac

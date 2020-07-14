@@ -1,0 +1,7 @@
+category: Libs
+requires: bash libgsl0 liblapack-devel 
+sdesc: "The GNU Scientific Library"
+ldesc: "The GNU Scientific Library, a collection of numerical routines for
+scientific computing. The library provides a wide range of mathematical routines
+such as random number generators, special functions and least-squares fitting."
+external-source: gsl

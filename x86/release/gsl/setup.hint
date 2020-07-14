@@ -1,0 +1,6 @@
+category: Science
+requires: cygwin libgsl0 
+sdesc: "The GNU Scientific Library"
+ldesc: "The GNU Scientific Library, a collection of numerical routines for
+scientific computing. The library provides a wide range of mathematical routines
+such as random number generators, special functions and least-squares fitting."

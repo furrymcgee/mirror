@@ -1,0 +1,10 @@
+category: Libs
+requires: cygwin libasyncns0 libdbus1_3 libgcc1 libiconv2 libjson-c2 libsndfile1 libwrap0 libxcb1 
+sdesc: "PulseAudio client library"
+ldesc: "PulseAudio is a sound system for POSIX OSes, meaning that it is
+a proxy for your sound applications. It allows you to do advanced operations
+on your sound data as it passes between your application and your hardware.
+Things like transferring the audio to a different machine, changing the sample
+format or channel count and mixing several sounds into one are easily achieved
+using a sound server."
+external-source: pulseaudio

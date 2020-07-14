@@ -1,0 +1,5 @@
+category: Devel
+requires: cygwin libffi6 libgcc1 libgirepository1.0_1 libglib2.0_0 python python-mako libgirepository1.0-devel
+sdesc: "GObject Introspection tools"
+ldesc: "The goal of the project is to describe GObject APIs and collect
+them in a uniform, machine readable format."

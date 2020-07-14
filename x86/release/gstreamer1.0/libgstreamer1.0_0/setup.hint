@@ -1,0 +1,6 @@
+category: Libs
+requires: cygwin libgcc1 libglib2.0_0 libintl8 
+sdesc: "GStreamer multimedia framework (1.0 branch)"
+ldesc: "The core library for the GStreamer multimedia framework. It
+contains the headers, core library files, and core elements."
+external-source: gstreamer1.0

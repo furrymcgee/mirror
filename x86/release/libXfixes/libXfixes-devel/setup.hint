@@ -1,0 +1,5 @@
+category: Libs
+requires: fixesproto libX11-devel libXau-devel libxcb-devel libXdmcp-devel libXfixes3 xproto 
+sdesc: "X.Org Xfixes library"
+ldesc: "X.Org Xfixes library"
+external-source: libXfixes

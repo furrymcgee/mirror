@@ -1,0 +1,5 @@
+category: Libs
+requires: libbz2-devel libexpat-devel libfontconfig-devel libfreetype-devel libpng-devel libX11-devel libXau-devel libxcb-devel libXdmcp-devel libXft2 libXrender-devel xproto zlib-devel 
+sdesc: "X.Org X Freetype library"
+ldesc: "X.Org X Freetype library"
+external-source: libXft

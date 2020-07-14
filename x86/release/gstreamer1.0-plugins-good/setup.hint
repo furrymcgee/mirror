@@ -1,0 +1,7 @@
+category: Audio Video
+requires: cygwin libbz2_1 libcairo2 libdv4 libFLAC8 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgstinterfaces1.0_0 libgstreamer1.0_0 libintl8 libjpeg8 liborc0.4_0 libpng16 libpulse0 libshout3 libsoup2.4_1 libspeex1 libstdc++6 libtag1 libvpx3 libwavpack1 libX11_6 libXdamage1 libXext6 libXfixes3 zlib0 gstreamer1.0-plugins-base
+sdesc: "GStreamer 1.0 Good Plug-ins collection"
+ldesc: "GStreamer Good Plug-ins is a set of plug-ins that are
+consider to have good quality code, correct functionality, and a
+preferred license (LGPL for the plug-in code, LGPL or LGPL-compatible
+for the supporting library)."

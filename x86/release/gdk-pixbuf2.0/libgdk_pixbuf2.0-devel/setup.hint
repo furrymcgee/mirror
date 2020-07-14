@@ -1,0 +1,6 @@
+category: Libs
+requires: cygwin libgdk_pixbuf2.0_0 libglib2.0-devel libglib2.0_0 libpng16-devel pkg-config girepository-GdkPixbuf2.0
+sdesc: "GNOME image loading library (development)"
+ldesc: "Offering a complete set of widgets, GTK+ is suitable for projects
+ranging from small one-off projects to complete application suites."
+external-source: gdk-pixbuf2.0

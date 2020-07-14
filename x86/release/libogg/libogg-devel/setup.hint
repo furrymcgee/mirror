@@ -1,0 +1,6 @@
+category: Audio Libs Devel
+requires: libogg0 
+sdesc: "Ogg Bitstream Library (Development)"
+ldesc: "Libogg is a library for manipulating ogg bitstreams.  It handles both
+making ogg bitstreams and getting packets from ogg bitstreams."
+external-source: libogg

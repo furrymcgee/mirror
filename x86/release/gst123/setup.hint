@@ -1,0 +1,8 @@
+category: Audio Video
+requires: cygwin libgcc1 libglib2.0_0 libgstinterfaces1.0_0 libgstreamer1.0_0 libgtk2.0_0 libncursesw10 libstdc++6 libX11_6 gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+sdesc: "GStreamer command-line media player"
+ldesc: "The program gst123 is designed to be a more flexible command line
+player in the spirit of ogg123 and mpg123, based on GStreamer. It plays all
+file formats GStreamer understands, so if you have a music collection which
+contains different file formats, like flac, ogg and mp3, you can use gst123 to
+play all your music files."

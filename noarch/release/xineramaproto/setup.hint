@@ -1,0 +1,4 @@
+category: X11
+requires: xproto
+sdesc: "X.Org Xinerama extension headers"
+ldesc: "X.Org Xinerama extension headers"

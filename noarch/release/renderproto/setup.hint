@@ -1,0 +1,4 @@
+category: X11
+requires: xproto
+sdesc: "X.Org XRender extension headers"
+ldesc: "X.Org XRender extension headers"

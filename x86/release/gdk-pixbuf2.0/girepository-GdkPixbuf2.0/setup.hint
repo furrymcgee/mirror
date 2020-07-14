@@ -1,0 +1,6 @@
+category: Libs
+requires: girepository-GLib2.0 libgdk_pixbuf2.0_0 
+sdesc: "GNOME image loading library (GObject Introspection)"
+ldesc: "Offering a complete set of widgets, GTK+ is suitable for projects
+ranging from small one-off projects to complete application suites."
+external-source: gdk-pixbuf2.0

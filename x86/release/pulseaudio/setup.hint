@@ -1,0 +1,9 @@
+category: Audio
+requires: cygwin libdbus1_3 libgcc1 libltdl7 liborc0.4_0 libpulse0 libsndfile1 libsoxr0 libspeexdsp1 libstdc++6 libtdb1 libwebrtc-audio-processing1 libX11-xcb1 libX11_6 libxcb1 
+sdesc: "PulseAudio sound server"
+ldesc: "PulseAudio is a sound system for POSIX OSes, meaning that it is
+a proxy for your sound applications. It allows you to do advanced operations
+on your sound data as it passes between your application and your hardware.
+Things like transferring the audio to a different machine, changing the sample
+format or channel count and mixing several sounds into one are easily achieved
+using a sound server."

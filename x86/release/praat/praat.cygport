@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="praat"
+VERSION="6.0.48-1"
+RELEASE=1
+CATEGORY="science"
+SUMMARY="program for speech analysis and synthesis"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/p/praat/praat_6.0.48-1.dsc http://ftp.debian.org/debian/pool/main/p/praat/praat_6.0.48.orig.tar.gz http://ftp.debian.org/debian/pool/main/p/praat/praat_6.0.48-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="praat.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libasound2 libc6 libcairo2 libgcc1 libglib2.0-0 libgtk2.0-0 libpango-1.0-0 libpangocairo-1.0-0 libpulse0 libstdc++6 oss-compat python3"
+
+inherit dpkg

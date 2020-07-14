@@ -1,0 +1,4 @@
+category: Devel
+requires:  renderproto
+sdesc: "X.Org XRandR extension headers"
+ldesc: "X.Org XRandR extension headers"

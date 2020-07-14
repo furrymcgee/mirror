@@ -1,0 +1,6 @@
+category: Libs
+requires: flac-devel libintl-devel libfluidsynth1 libglib2.0-devel libiconv libncurses-devel libogg-devel libpcre-devel libportaudio-devel libpulse-devel libsndfile-devel libvorbis-devel readline 
+sdesc: "SoundFont software synthesizer library"
+ldesc: "FluidSynth is a real-time software synthesizer based on the
+SoundFont 2 specifications."
+external-source: fluidsynth

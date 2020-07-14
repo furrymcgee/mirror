@@ -1,0 +1,6 @@
+category: Libs
+requires: libgcc1 libogg0 libopenssl100 libopus0 cygwin
+sdesc: "High-level Opus decoder API"
+ldesc: "Opusfile provides application developers with a high-level API
+for decoding and seeking in .opus files."
+external-source: opusfile

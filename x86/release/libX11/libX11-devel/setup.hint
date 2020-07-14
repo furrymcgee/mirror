@@ -1,0 +1,5 @@
+category: Libs
+requires: kbproto libX11_6 libXau-devel libxcb-devel libXdmcp-devel xproto 
+sdesc: "X.Org X11 core library (development)"
+ldesc: "X.Org X11 core library"
+external-source: libX11
