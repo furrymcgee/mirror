@@ -1,0 +1,186 @@
+Script started on Tue, Jul 14, 2020  8:11:41 PM
+source autogen.sh
+]0;/mnt/repository/Y%3a%2f
+[32mAdministrator@- [33m/mnt/repository/Y%3a%2f[0m
+$ source autogen.sh
++ export SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2016/08/30/104223
++ SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2016/08/30/104223
++ test -d x86/release
++ test -d noarch/release
++ : find x86/setup.ini -quit -maxdepth 0
++ bash
++ : bash
++ : rm -rf ./noarch/release/emacs-auctex
++ sed 's/^.//'
++ make -f - clean x86/release/custompackage-0.0.1-1 x86/setup.ini
+find noarch x86 -name *_*.orig.tar.* -delete
+find noarch x86 -name *_*.debian.tar.* -delete
+find noarch x86 -name *.tar.* -a ! -name *-*-*.tar.* -delete
+mkdir x86/release//custompackage || true
+mkdir: cannot create directory ‘x86/release//custompackage’: File exists
+cat > x86/release//custompackage/setup.hint <&20
+tar -Jcf x86/release//custompackage/custompackage-0.0.1-1.tar.xz  --files-from /dev/null
+tar -Jcf x86/release//custompackage/custompackage-0.0.1-1-src.tar.xz --files-from /dev/null
+mksetupini \
+	--arch x86 \
+	--inifile=x86/setup.ini \
+	--releasearea=. \
+	--setup-version=2.874 \
+	--okmissing curr \
+	--okmissing required-package \
+	# --verbose \
+	# --disable-check=missing-required-package \
+	# --disable-check=missing-depended-package \
+
+mksetupini: tar file 'libclass-method-modifiers-perl-2.12-1-1-src.tar.xz' in package 'libclass-method-modifiers-perl' contains '-' in version
+mksetupini: tar file 'libclass-method-modifiers-perl-2.12-1-1.tar.xz' in package 'libclass-method-modifiers-perl' contains '-' in version
+mksetupini: unexpected files in libclass-method-modifiers-perl: libclass-method-modifiers-perl.cygport, libclass-method-modifiers-perl_2.12-1.dsc
+mksetupini: no setup.hint in ./noarch/release/python3-chardet but has files: python3-chardet-2.2.1-1-src.tar.xz, python3-chardet-2.2.1-1.tar.xz
+mksetupini: tar file 'libemail-date-format-perl-1.005-1-1.tar.xz' in package 'libemail-date-format-perl' contains '-' in version
+mksetupini: tar file 'libemail-date-format-perl-1.005-1-1-src.tar.xz' in package 'libemail-date-format-perl' contains '-' in version
+mksetupini: unexpected files in libemail-date-format-perl: libemail-date-format-perl.cygport, libemail-date-format-perl_1.005-1.dsc
+mksetupini: tar file 'libemail-mime-perl-1.946-1-1.tar.xz' in package 'libemail-mime-perl' contains '-' in version
+mksetupini: tar file 'libemail-mime-perl-1.946-1-1-src.tar.xz' in package 'libemail-mime-perl' contains '-' in version
+mksetupini: unexpected files in libemail-mime-perl: libemail-mime-perl.cygport, libemail-mime-perl_1.946-1.dsc
+mksetupini: no setup.hint in ./noarch/release/python3-ply but has files: python3-ply-3.6-1-src.tar.xz, python3-ply-3.6-1.tar.xz
+mksetupini: no setup.hint in ./noarch/release/python3-urllib3 but has files: python3-urllib3-1.10.4-1.tar.xz, python3-urllib3-1.10.4-1-src.tar.xz
+mksetupini: no setup.hint in ./noarch/release/httpie but has files: httpie-0.9.3-1-src.tar.xz, httpie-0.9.3-1.tar.xz
+mksetupini: unexpected files in automake: automake.cygport, automake.patch
+mksetupini: tar file 'info2www-1.2.2.9-24-1-src.tar.xz' in package 'info2www' contains '-' in version
+mksetupini: tar file 'info2www-1.2.2.9-24-1.tar.xz' in package 'info2www' contains '-' in version
+mksetupini: unexpected files in info2www: info2www.cygport, info2www_1.2.2.9-24.dsc, info2www.patch
+mksetupini: unexpected files in doc-base: doc-base.patch, doc-base.cygport, doc-base_0.10.8.dsc
+mksetupini: unexpected files in cygport: cygport.cygport, cygport.patch
+mksetupini: no setup.hint in ./noarch/release/python3-six but has files: python3-six-1.9.0-1.tar.xz, python3-six-1.9.0-1-src.tar.xz
+mksetupini: unexpected files in dh-autoreconf: dh-autoreconf.patch, dh-autoreconf.cygport, dh-autoreconf_19.dsc
+mksetupini: no setup.hint in ./noarch/release/python3-pycparser but has files: python3-pycparser-2.12-1-src.tar.xz, python3-pycparser-2.12-1.tar.xz
+mksetupini: tar file 'docx2txt-1.4-1-1.tar.xz' in package 'docx2txt' contains '-' in version
+mksetupini: tar file 'docx2txt-1.4-1-1-src.tar.xz' in package 'docx2txt' contains '-' in version
+mksetupini: unexpected files in docx2txt: docx2txt.cygport, docx2txt_1.4-1.dsc
+mksetupini: unexpected files in sensible-utils: sensible-utils_0.0.12.dsc, sensible-utils.cygport
+mksetupini: unexpected files in cdbs: cdbs.cygport, cdbs_0.4.159.dsc
+mksetupini: tar file 'libemail-messageid-perl-1.406-1-1-src.tar.xz' in package 'libemail-messageid-perl' contains '-' in version
+mksetupini: tar file 'libemail-messageid-perl-1.406-1-1.tar.xz' in package 'libemail-messageid-perl' contains '-' in version
+mksetupini: unexpected files in libemail-messageid-perl: libemail-messageid-perl.cygport, libemail-messageid-perl_1.406-1.dsc
+mksetupini: tar file 'libemail-abstract-perl-3.008-2-1.tar.xz' in package 'libemail-abstract-perl' contains '-' in version
+mksetupini: tar file 'libemail-abstract-perl-3.008-2-1-src.tar.xz' in package 'libemail-abstract-perl' contains '-' in version
+mksetupini: unexpected files in libemail-abstract-perl: libemail-abstract-perl.cygport, libemail-abstract-perl_3.008-2.dsc
+mksetupini: unexpected files in intltool-debian: intltool-debian.cygport
+mksetupini: tar file 'libemail-mime-encodings-perl-1.315-2-1-src.tar.xz' in package 'libemail-mime-encodings-perl' contains '-' in version
+mksetupini: tar file 'libemail-mime-encodings-perl-1.315-2-1.tar.xz' in package 'libemail-mime-encodings-perl' contains '-' in version
+mksetupini: unexpected files in libemail-mime-encodings-perl: libemail-mime-encodings-perl_1.315-2.dsc, libemail-mime-encodings-perl.cygport
+mksetupini: tar file 'libmime-tools-perl-5.509-1-1.tar.xz' in package 'libmime-tools-perl' contains '-' in version
+mksetupini: tar file 'libmime-tools-perl-5.509-1-1-src.tar.xz' in package 'libmime-tools-perl' contains '-' in version
+mksetupini: unexpected files in libmime-tools-perl: libmime-tools-perl.cygport, libmime-tools-perl_5.509-1.dsc
+mksetupini: tar file 'libemail-outlook-message-perl-0.919-1-1.tar.xz' in package 'libemail-outlook-message-perl' contains '-' in version
+mksetupini: tar file 'libemail-outlook-message-perl-0.919-1-1-src.tar.xz' in package 'libemail-outlook-message-perl' contains '-' in version
+mksetupini: unexpected files in libemail-outlook-message-perl: libemail-outlook-message-perl.cygport, libemail-outlook-message-perl_0.919-1.dsc
+mksetupini: unexpected files in calm: calm.patch, calm.cygport
+mksetupini: tar file 'libemail-simple-perl-2.216-1-1.tar.xz' in package 'libemail-simple-perl' contains '-' in version
+mksetupini: tar file 'libemail-simple-perl-2.216-1-1-src.tar.xz' in package 'libemail-simple-perl' contains '-' in version
+mksetupini: unexpected files in libemail-simple-perl: libemail-simple-perl.cygport, libemail-simple-perl_2.216-1.dsc
+mksetupini: tar file 'libole-storage-lite-perl-0.19-2+deb10u1-1.tar.xz' in package 'libole-storage-lite-perl' contains '-' in version
+mksetupini: tar file 'libole-storage-lite-perl-0.19-2+deb10u1-1-src.tar.xz' in package 'libole-storage-lite-perl' contains '-' in version
+mksetupini: unexpected files in libole-storage-lite-perl: libole-storage-lite-perl_0.19-2+deb10u1.dsc, libole-storage-lite-perl.cygport
+mksetupini: tar file 'libemail-sender-perl-1.300031-2-1-src.tar.xz' in package 'libemail-sender-perl' contains '-' in version
+mksetupini: tar file 'libemail-sender-perl-1.300031-2-1.tar.xz' in package 'libemail-sender-perl' contains '-' in version
+mksetupini: unexpected files in libemail-sender-perl: libemail-sender-perl_1.300031-2.dsc, libemail-sender-perl.cygport
+mksetupini: tar file 'libmro-compat-perl-0.13-1-1.tar.xz' in package 'libmro-compat-perl' contains '-' in version
+mksetupini: tar file 'libmro-compat-perl-0.13-1-1-src.tar.xz' in package 'libmro-compat-perl' contains '-' in version
+mksetupini: unexpected files in libmro-compat-perl: libmro-compat-perl.cygport, libmro-compat-perl_0.13-1.dsc
+mksetupini: package 'libmro-compat-perl' sdesc starts with 'mro:'; this is redundant as the UI will show both the package name and sdesc
+mksetupini: no setup.hint in ./noarch/release/python3-requests but has files: python3-requests-2.7.0-1.tar.xz, python3-requests-2.7.0-1-src.tar.xz
+mksetupini: tar file 'libarchive-cpio-perl-0.10-1-1-src.tar.xz' in package 'libarchive-cpio-perl' contains '-' in version
+mksetupini: tar file 'libarchive-cpio-perl-0.10-1-1.tar.xz' in package 'libarchive-cpio-perl' contains '-' in version
+mksetupini: unexpected files in libarchive-cpio-perl: libarchive-cpio-perl.cygport, libarchive-cpio-perl_0.10-1.dsc
+mksetupini: tar file 'libthrowable-perl-0.200013-1-1.tar.xz' in package 'libthrowable-perl' contains '-' in version
+mksetupini: tar file 'libthrowable-perl-0.200013-1-1-src.tar.xz' in package 'libthrowable-perl' contains '-' in version
+mksetupini: unexpected files in libthrowable-perl: libthrowable-perl_0.200013-1.dsc, libthrowable-perl.cygport
+mksetupini: tar file 'libmoox-types-mooselike-perl-0.29-1-1.tar.xz' in package 'libmoox-types-mooselike-perl' contains '-' in version
+mksetupini: tar file 'libmoox-types-mooselike-perl-0.29-1-1-src.tar.xz' in package 'libmoox-types-mooselike-perl' contains '-' in version
+mksetupini: unexpected files in libmoox-types-mooselike-perl: libmoox-types-mooselike-perl.cygport, libmoox-types-mooselike-perl_0.29-1.dsc
+mksetupini: tar file 'libyaml-tiny-perl-1.73-1-1-src.tar.xz' in package 'libyaml-tiny-perl' contains '-' in version
+mksetupini: tar file 'libyaml-tiny-perl-1.73-1-1.tar.xz' in package 'libyaml-tiny-perl' contains '-' in version
+mksetupini: unexpected files in libyaml-tiny-perl: libyaml-tiny-perl.cygport, libyaml-tiny-perl_1.73-1.dsc
+mksetupini: tar file 'libmoo-perl-2.003004-2-1-src.tar.xz' in package 'libmoo-perl' contains '-' in version
+mksetupini: tar file 'libmoo-perl-2.003004-2-1.tar.xz' in package 'libmoo-perl' contains '-' in version
+mksetupini: unexpected files in libmoo-perl: libmoo-perl.cygport, libmoo-perl_2.003004-2.dsc
+mksetupini: unexpected files in po-debconf: po-debconf.cygport
+mksetupini: unexpected files in autotools-dev: autotools-dev.cygport, autotools-dev_20180224.1.dsc
+mksetupini: tar file 'libemail-mime-contenttype-perl-1.022-1-1-src.tar.xz' in package 'libemail-mime-contenttype-perl' contains '-' in version
+mksetupini: tar file 'libemail-mime-contenttype-perl-1.022-1-1.tar.xz' in package 'libemail-mime-contenttype-perl' contains '-' in version
+mksetupini: unexpected files in libemail-mime-contenttype-perl: libemail-mime-contenttype-perl.cygport, libemail-mime-contenttype-perl_1.022-1.dsc
+mksetupini: tar file 'strip-nondeterminism-1.1.2-1-1-src.tar.xz' in package 'strip-nondeterminism' contains '-' in version
+mksetupini: tar file 'strip-nondeterminism-1.1.2-1-1.tar.xz' in package 'strip-nondeterminism' contains '-' in version
+mksetupini: unexpected files in strip-nondeterminism: strip-nondeterminism.cygport, strip-nondeterminism_1.1.2-1.dsc
+mksetupini: tar file 'libsub-exporter-progressive-perl-0.001013-1-1-src.tar.xz' in package 'libsub-exporter-progressive-perl' contains '-' in version
+mksetupini: tar file 'libsub-exporter-progressive-perl-0.001013-1-1.tar.xz' in package 'libsub-exporter-progressive-perl' contains '-' in version
+mksetupini: unexpected files in libsub-exporter-progressive-perl: libsub-exporter-progressive-perl_0.001013-1.dsc, libsub-exporter-progressive-perl.cygport
+mksetupini: tar file 'libmodule-build-perl-0.422400-1-1.tar.xz' in package 'libmodule-build-perl' contains '-' in version
+mksetupini: tar file 'libmodule-build-perl-0.422400-1-1-src.tar.xz' in package 'libmodule-build-perl' contains '-' in version
+mksetupini: unexpected files in libmodule-build-perl: libmodule-build-perl_0.422400-1.dsc, libmodule-build-perl.cygport
+mksetupini: tar file 'libsub-quote-perl-2.005001-1-1.tar.xz' in package 'libsub-quote-perl' contains '-' in version
+mksetupini: tar file 'libsub-quote-perl-2.005001-1-1-src.tar.xz' in package 'libsub-quote-perl' contains '-' in version
+mksetupini: unexpected files in libsub-quote-perl: libsub-quote-perl_2.005001-1.dsc, libsub-quote-perl.cygport
+mksetupini: unexpected files in dh-python: dh-python.cygport, dh-python_3.20190308.dsc
+mksetupini: tar file 'libdevel-globaldestruction-perl-0.14-1-1-src.tar.xz' in package 'libdevel-globaldestruction-perl' contains '-' in version
+mksetupini: tar file 'libdevel-globaldestruction-perl-0.14-1-1.tar.xz' in package 'libdevel-globaldestruction-perl' contains '-' in version
+mksetupini: unexpected files in libdevel-globaldestruction-perl: libdevel-globaldestruction-perl.cygport, libdevel-globaldestruction-perl_0.14-1.dsc
+mksetupini: tar file 'libfile-ncopy-perl-0.36-2-1.tar.xz' in package 'libfile-ncopy-perl' contains '-' in version
+mksetupini: tar file 'libfile-ncopy-perl-0.36-2-1-src.tar.xz' in package 'libfile-ncopy-perl' contains '-' in version
+mksetupini: unexpected files in libfile-ncopy-perl: libfile-ncopy-perl.cygport, libfile-ncopy-perl_0.36-2.dsc
+mksetupini: unexpected files in debhelper: debhelper.patch, debhelper.cygport, debhelper_12.1.1.dsc
+mksetupini: unexpected files in debconf: debconf.patch, debconf_1.5.71.dsc, debconf.cygport
+mksetupini: tar file 'librole-tiny-perl-2.000006-1-1-src.tar.xz' in package 'librole-tiny-perl' contains '-' in version
+mksetupini: tar file 'librole-tiny-perl-2.000006-1-1.tar.xz' in package 'librole-tiny-perl' contains '-' in version
+mksetupini: unexpected files in librole-tiny-perl: librole-tiny-perl.cygport, librole-tiny-perl_2.000006-1.dsc
+mksetupini: no setup.hint in ./noarch/release/python3-docutils but has files: python3-docutils-0.12-1-src.tar.xz, python3-docutils-0.12-1.tar.xz
+mksetupini: no setup.hint in ./noarch/release/python3-pygments but has files: python3-pygments-2.0.2-1.tar.xz, python3-pygments-2.0.2-1-src.tar.xz
+mksetupini: tar file 'libdevel-cover-perl-1.31-1+b2-1-src.tar.xz' in package 'libdevel-cover-perl' contains '-' in version
+mksetupini: tar file 'libdevel-cover-perl-1.31-1+b2-1.tar.xz' in package 'libdevel-cover-perl' contains '-' in version
+mksetupini: unexpected files in libdevel-cover-perl: libdevel-cover-perl_1.31-1.dsc, libdevel-cover-perl.cygport
+mksetupini: unexpected files in dpkg: dpkg.patch, dpkg.cygport, dpkg_1.19.7.dsc
+mksetupini: unexpected files in perl-Encode: perl-Encode.cygport
+mksetupini: unexpected files in dwww: dwww_1.13.4+nmu3.dsc, dwww.patch, dwww.cygport
+mksetupini: no setup.hint in ./x86/release/db/libdb-devel but has files: libdb-devel-5.3.28-1.tar.xz
+mksetupini: no setup.hint in ./x86/release/balance but has files: balance-3.54-2.tar.bz2, balance-3.54-2-src.tar.bz2
+mksetupini: no setup.hint in ./x86/release/lua-ldap but has files: lua-ldap-1.1.0-2.tar.xz, lua-ldap-1.1.0-2-src.tar.xz
+mksetupini: no setup.hint in ./x86/release/python3-cffi but has files: python3-cffi-0.9.2-1-src.tar.xz, python3-cffi-0.9.2-1.tar.xz
+mksetupini: no setup.hint in ./x86/release/lua-crypto but has files: lua-crypto-0.3.2-2-src.tar.xz, lua-crypto-0.3.2-2.tar.xz
+mksetupini: unexpected files in dh-exec: dh-exec.cygport
+mksetupini: no setup.hint in ./x86/release/libxml2/libxml2-devel but has files: libxml2-devel-2.9.4-1.tar.xz
+mksetupini: tar file 'ngircd-25-2-1-src.tar.xz' in package 'ngircd' contains '-' in version
+mksetupini: tar file 'ngircd-25-2-1.tar.xz' in package 'ngircd' contains '-' in version
+mksetupini: unexpected files in ngircd: ngircd.patch, ngircd.cygport
+mksetupini: no setup.hint in ./x86/release/python3-imaging but has files: python3-imaging-2.8.2-2.tar.xz, python3-imaging-2.8.2-2-src.tar.xz
+mksetupini: tar file 'publib-dev-0.40-3-1.tar.xz' in package 'publib-dev' contains '-' in version
+mksetupini: tar file 'publib-dev-0.40-3-1-src.tar.xz' in package 'publib-dev' contains '-' in version
+mksetupini: unexpected files in publib-dev: publib-dev.cygport
+mksetupini: no setup.hint in ./x86/release/abook but has files: abook-0.6.1-1.tar.xz, abook-0.6.1-1-src.tar.xz
+mksetupini: unexpected files in tar: tar.cygport, tar.patch
+mksetupini: tar file 'eggdrop-1.6.21-4+b1-1-src.tar.xz' in package 'eggdrop' contains '-' in version
+mksetupini: tar file 'eggdrop-1.6.21-4+b1-1.tar.xz' in package 'eggdrop' contains '-' in version
+mksetupini: unexpected files in eggdrop: eggdrop.patch, eggdrop_1.6.21-4.dsc, eggdrop.cygport
+mksetupini: tar file 'dctrl-tools-2.24-3-1-src.tar.xz' in package 'dctrl-tools' contains '-' in version
+mksetupini: tar file 'dctrl-tools-2.24-3-1.tar.xz' in package 'dctrl-tools' contains '-' in version
+mksetupini: unexpected files in dctrl-tools: dctrl-tools.cygport, dctrl-tools.patch
+mksetupini: no setup.hint in ./x86/release/cgit but has files: cgit-1.0-1-src.tar.xz, cgit-1.0-1.tar.xz
+mksetupini: unexpected files in bash: bash.cygport
+mksetupini: unexpected files in ffmpeg: ffmpeg_4.1.4-1~deb10u1.dsc, ffmpeg.patch, ffmpeg.cygport
+mksetupini: no setup.hint in ./x86/release/highlight but has files: highlight-3.23-1.tar.xz, highlight-3.23-1-src.tar.xz
+mksetupini: no setup.hint in ./x86/release/highlight/highlight-common but has files: highlight-common-3.23-1.tar.xz
+mksetupini: tar file 'swish++-6.1.5-5-1.tar.xz' in package 'swish++' contains '-' in version
+mksetupini: tar file 'swish++-6.1.5-5-1-src.tar.xz' in package 'swish++' contains '-' in version
+mksetupini: unexpected files in swish++: swish++.patch, swish++.cygport
+mksetupini: tar file 'recutils-1.7-3-1-src.tar.xz' in package 'recutils' contains '-' in version
+mksetupini: tar file 'recutils-1.7-3-1.tar.xz' in package 'recutils' contains '-' in version
+mksetupini: unexpected files in recutils: recutils.cygport, recutils.patch
+file -E x86/setup.ini || exit 2
+x86/setup.ini: UTF-8 Unicode text, with very long lines
+bzip2 < x86/setup.ini > x86//setup.bz2
+xz -6e < x86/setup.ini > x86//setup.xz
+]0;/mnt/repository/Y%3a%2f
+[32mAdministrator@- [33m/mnt/repository/Y%3a%2f[0m
+$ exit
+
+Script done on Tue, Jul 14, 2020  8:36:08 PM
