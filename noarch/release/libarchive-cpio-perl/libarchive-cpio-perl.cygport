@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libarchive-cpio-perl"
+VERSION="0.10-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module for manipulations of cpio archives"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/liba/libarchive-cpio-perl/libarchive-cpio-perl_0.10-1.dsc http://ftp.debian.org/debian/pool/main/liba/libarchive-cpio-perl/libarchive-cpio-perl_0.10.orig.tar.gz http://ftp.debian.org/debian/pool/main/liba/libarchive-cpio-perl/libarchive-cpio-perl_0.10-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl"
+
+inherit dpkg

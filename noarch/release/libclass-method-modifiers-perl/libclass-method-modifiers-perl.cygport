@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libclass-method-modifiers-perl"
+VERSION="2.12-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="Perl module providing method modifiers"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libc/libclass-method-modifiers-perl/libclass-method-modifiers-perl_2.12-1.dsc http://ftp.debian.org/debian/pool/main/libc/libclass-method-modifiers-perl/libclass-method-modifiers-perl_2.12.orig.tar.gz http://ftp.debian.org/debian/pool/main/libc/libclass-method-modifiers-perl/libclass-method-modifiers-perl_2.12-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libmoose-perl libtest-fatal-perl libtest-requires-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl"
+
+inherit dpkg

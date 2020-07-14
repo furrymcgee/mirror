@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="ngircd"
+VERSION="25-2"
+RELEASE=1
+CATEGORY="net"
+SUMMARY="lightweight Internet Relay Chat server"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/n/ngircd/ngircd_25-2.dsc http://ftp.debian.org/debian/pool/main/n/ngircd/ngircd_25.orig.tar.xz http://ftp.debian.org/debian/pool/main/n/ngircd/ngircd_25-2.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="ngircd.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libc6 libgnutls30 libident libpam0g zlib1g lsb-base"
+
+inherit dpkg

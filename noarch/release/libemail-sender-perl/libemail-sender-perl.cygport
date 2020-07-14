@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libemail-sender-perl"
+VERSION="1.300031-2"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="Perl module for sending email"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libe/libemail-sender-perl/libemail-sender-perl_1.300031-2.dsc http://ftp.debian.org/debian/pool/main/libe/libemail-sender-perl/libemail-sender-perl_1.300031.orig.tar.gz http://ftp.debian.org/debian/pool/main/libe/libemail-sender-perl/libemail-sender-perl_1.300031-2.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libcapture-tiny-perl libemail-abstract-perl libemail-address-xs-perl libemail-simple-perl  libmodule-runtime-perl libmoo-perl libmoox-types-mooselike-perl libsub-exporter-perl libsub-override-perl libtest-mockobject-perl libthrowable-perl libtry-tiny-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libcapture-tiny-perl libemail-abstract-perl libemail-address-xs-perl libemail-simple-perl  libmodule-runtime-perl libmoo-perl libmoox-types-mooselike-perl libsub-exporter-perl libthrowable-perl libtry-tiny-perl perl"
+
+inherit dpkg

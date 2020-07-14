@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libemail-simple-perl"
+VERSION="2.216-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module to parse RFC2822 headers and message format"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libe/libemail-simple-perl/libemail-simple-perl_2.216-1.dsc http://ftp.debian.org/debian/pool/main/libe/libemail-simple-perl/libemail-simple-perl_2.216.orig.tar.gz http://ftp.debian.org/debian/pool/main/libe/libemail-simple-perl/libemail-simple-perl_2.216-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libemail-date-format-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libemail-date-format-perl"
+
+inherit dpkg

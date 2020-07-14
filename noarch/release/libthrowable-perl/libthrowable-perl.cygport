@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libthrowable-perl"
+VERSION="0.200013-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="role for classes that can be thrown"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libt/libthrowable-perl/libthrowable-perl_0.200013-1.dsc http://ftp.debian.org/debian/pool/main/libt/libthrowable-perl/libthrowable-perl_0.200013.orig.tar.gz http://ftp.debian.org/debian/pool/main/libt/libthrowable-perl/libthrowable-perl_0.200013-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libdevel-stacktrace-perl libmodule-runtime-perl libmoo-perl  perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libdevel-stacktrace-perl libmodule-runtime-perl libmoo-perl"
+
+inherit dpkg

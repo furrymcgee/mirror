@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libdevel-cover-perl"
+VERSION="1.31-1+b2"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="Perl tool for determining code coverage metrics"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libd/libdevel-cover-perl/libdevel-cover-perl_1.31-1.dsc http://ftp.debian.org/debian/pool/main/libd/libdevel-cover-perl/libdevel-cover-perl_1.31.orig.tar.gz http://ftp.debian.org/debian/pool/main/libd/libdevel-cover-perl/libdevel-cover-perl_1.31-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl perlapi-5.28.1 libc6 perl libhtml-parser-perl "
+
+inherit dpkg

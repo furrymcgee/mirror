@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="cdbs"
+VERSION="0.4.159"
+RELEASE=1
+CATEGORY="devel"
+SUMMARY="common build system for Debian packages"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/c/cdbs/cdbs_0.4.159.dsc http://ftp.debian.org/debian/pool/main/c/cdbs/cdbs_0.4.159.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="debhelper dh-buildinfo autoconf fakeroot python-dev python-all-dev python3-all-dev pypy-dev dh-python ant  sharutils lzma"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES=""
+
+inherit dpkg

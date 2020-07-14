@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libole-storage-lite-perl"
+VERSION="0.19-2+deb10u1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="simple class for OLE document interface"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libo/libole-storage-lite-perl/libole-storage-lite-perl_0.19-2+deb10u1.dsc http://ftp.debian.org/debian/pool/main/libo/libole-storage-lite-perl/libole-storage-lite-perl_0.19.orig.tar.gz http://ftp.debian.org/debian/pool/main/libo/libole-storage-lite-perl/libole-storage-lite-perl_0.19-2+deb10u1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl libio-stringy-perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libio-stringy-perl"
+
+inherit dpkg

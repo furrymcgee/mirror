@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libfile-ncopy-perl"
+VERSION="0.36-2"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module for file copying like cp"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libf/libfile-ncopy-perl/libfile-ncopy-perl_0.36-2.dsc http://ftp.debian.org/debian/pool/main/libf/libfile-ncopy-perl/libfile-ncopy-perl_0.36.orig.tar.gz http://ftp.debian.org/debian/pool/main/libf/libfile-ncopy-perl/libfile-ncopy-perl_0.36-2.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl libtest-pod-perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl"
+
+inherit dpkg

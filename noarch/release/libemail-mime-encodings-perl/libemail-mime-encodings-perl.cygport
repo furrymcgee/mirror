@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libemail-mime-encodings-perl"
+VERSION="1.315-2"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="unified interface to MIME encoding and decoding"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libe/libemail-mime-encodings-perl/libemail-mime-encodings-perl_1.315-2.dsc http://ftp.debian.org/debian/pool/main/libe/libemail-mime-encodings-perl/libemail-mime-encodings-perl_1.315.orig.tar.gz http://ftp.debian.org/debian/pool/main/libe/libemail-mime-encodings-perl/libemail-mime-encodings-perl_1.315-2.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libcapture-tiny-perl  perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl"
+
+inherit dpkg

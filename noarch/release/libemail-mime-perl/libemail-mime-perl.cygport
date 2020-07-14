@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libemail-mime-perl"
+VERSION="1.946-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module for simple MIME message parsing"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libe/libemail-mime-perl/libemail-mime-perl_1.946-1.dsc http://ftp.debian.org/debian/pool/main/libe/libemail-mime-perl/libemail-mime-perl_1.946.orig.tar.gz http://ftp.debian.org/debian/pool/main/libe/libemail-mime-perl/libemail-mime-perl_1.946-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl libemail-address-xs-perl libemail-messageid-perl libemail-mime-contenttype-perl libemail-mime-encodings-perl libemail-simple-perl libmime-types-perl libmodule-runtime-perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libemail-address-xs-perl libemail-messageid-perl libemail-simple-perl libemail-mime-contenttype-perl libemail-mime-encodings-perl libmime-types-perl libmodule-runtime-perl"
+
+inherit dpkg

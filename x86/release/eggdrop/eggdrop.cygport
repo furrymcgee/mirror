@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="eggdrop"
+VERSION="1.6.21-4+b1"
+RELEASE=1
+CATEGORY="net"
+SUMMARY="Advanced IRC Robot"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/e/eggdrop/eggdrop_1.6.21-4.dsc http://ftp.debian.org/debian/pool/main/e/eggdrop/eggdrop_1.6.21.orig.tar.gz http://ftp.debian.org/debian/pool/main/e/eggdrop/eggdrop_1.6.21-4.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="./eggdrop.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libc6 libtcl8.6 zlib1g eggdrop-data"
+
+inherit dpkg

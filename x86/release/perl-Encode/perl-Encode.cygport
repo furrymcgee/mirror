@@ -1,0 +1,86 @@
+################################################################################
+#
+# perl.cygclass - functions for building CPAN Perl modules
+#
+# Part of cygport - Cygwin packaging application
+# Copyright (C) 2006-2016 Yaakov Selkowitz
+# Provided by the Cygwin Ports project <http://sourceware.org/cygwinports/>
+#
+# cygport is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# cygport is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with cygport.  If not, see <http://www.gnu.org/licenses/>.
+#
+################################################################################
+
+#****h* Cygclasses/perl.cygclass
+#  SYNOPSIS
+#  [CPAN_AUTHOR="username"]
+#  inherit perl
+#  DESCRIPTION
+#  Perl is an interpreted programming language used in a variety of software,
+#  particularly text processing, network programming, system administration,
+#  and CGI scripting.  It is easily extendible with modules written in Perl
+#  and/or C/C++.  Thousands of such modules are centrally hosted on the
+#  Comprehensive Perl Archive Network (CPAN).
+#
+#  This cygclass provides definitions for building Perl dependent packages,
+#  and functions for building Perl module packages.
+#  EXAMPLES
+#  A typical CPAN extension package looks like this:
+#
+#    CPAN_AUTHOR=adamk
+#    inherit perl
+#    
+#    NAME="perl-Archive-Zip"
+#    VERSION=1.30
+#    RELEASE=1
+#    CATEGORY="Perl"
+#    SUMMARY="Perl module for working with Zip archives"
+#    DESCRIPTION="This module allows a Perl program to create, manipulate, read,
+#    and write Zip archive files. Zip archives can be created, or you can read
+#    from existing zip files. Once created, they can be written to files, streams,
+#    or strings."
+#
+#  Occasionaly, a CPAN module tries to ask questions while configuring the
+#  build, in which case you can override that in src_compile:
+#
+#    src_compile() {
+#      lndirs
+#      cd ${B}
+#      # answer 'y' to all questions from Makefile.PL
+#      yes | perl_compile
+#    }
+#
+#  Perl modules which provide XML::SAX parser engines require an additional
+#  step during src_install, e.g.:
+#
+#    src_install() {
+#      cd ${B}
+#      perl_install
+#      perl_sax_parser_register XML::LibXML::SAX
+#    }
+#
+#  INHERITED BY
+#  gtk2-perl.cygclass
+#  REQUIRES
+#  perl
+#****
+
+inherit perl
+
+NAME="perl-Encode"
+VERSION=3.06
+RELEASE=1
+CATEGORY="Perl"
+SUMMARY="Encode - character encodings in Perl"
+DESCRIPTION="The Encode module provides the interface between Perl strings
+and the rest of the system. Perl strings are sequences of *characters*."

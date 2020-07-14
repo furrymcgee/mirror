@@ -1,0 +1,44 @@
+# tar.cygport - directions for packaging tar for cygwin
+
+# Copyright (C) 2006-2010, 2014-2016 Eric Blake
+# This file is free software; I give unlimited permission to copy and/or
+# distribute it, with or without modifications, as long as this notice is
+# preserved.
+
+NAME=tar
+VERSION=1.29
+RELEASE=1
+
+SUMMARY="A GNU file archiving program"
+DESCRIPTION="The GNU tar program saves many files together in one archive
+and can restore individual files (or all of the files) from that
+archive. Tar can also be used to add supplemental files to an archive and
+to update or list files in the archive. Tar includes multivolume support,
+automatic archive compression/decompression, the ability to perform
+remote archives, and the ability to perform incremental and full backups."
+CATEGORY=Base
+REQUIRES='bzip2 gzip xz'
+
+HOMEPAGE=http://www.gnu.org/software/$PN
+SRC_URI=mirror://gnu/$PN/$P.tar.xz
+SRC_URI+=" $SRC_URI.sig"
+
+CYGCONF_ARGS="--without-libintl-prefix --without-libiconv-prefix \
+  --enable-backup-scripts --with-packager=Cygwin --with-packager-version=$PVR \
+  --with-packager-bug-reports=cygwin@cygwin.com"
+
+DIFF_EXCLUDES='-x testsuite'
+
+# Enable this function for releases that work without autoreconf
+src_compile()
+{
+  cd $B
+  cygconf
+  cygmake
+}
+
+# Local Variables:
+# fill-column: 72
+# mode: sh
+# sh-indentation: 2
+# End:

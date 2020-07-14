@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="ffmpeg"
+VERSION="4.1.4"
+RELEASE=1
+CATEGORY="video"
+SUMMARY="Tools for transcoding, streaming and playing of multimedia files"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.1.4-1~deb10u1.dsc http://ftp.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.1.4.orig.tar.xz http://ftp.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.1.4.orig.tar.xz.asc http://ftp.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.1.4-1~deb10u1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="ffmpeg.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND="cleancss doxygen node-less"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 libc6 libpostproc55 libsdl2-2.0-0 libswresample3 libswscale5"
+
+inherit dpkg

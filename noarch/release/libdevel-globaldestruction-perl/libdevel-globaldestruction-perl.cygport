@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libdevel-globaldestruction-perl"
+VERSION="0.14-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module to expose the flag that marks global destruction"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libd/libdevel-globaldestruction-perl/libdevel-globaldestruction-perl_0.14-1.dsc http://ftp.debian.org/debian/pool/main/libd/libdevel-globaldestruction-perl/libdevel-globaldestruction-perl_0.14.orig.tar.gz http://ftp.debian.org/debian/pool/main/libd/libdevel-globaldestruction-perl/libdevel-globaldestruction-perl_0.14-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libsub-exporter-progressive-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libsub-exporter-progressive-perl"
+
+inherit dpkg

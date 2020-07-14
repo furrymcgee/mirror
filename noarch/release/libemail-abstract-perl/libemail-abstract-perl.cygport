@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libemail-abstract-perl"
+VERSION="3.008-2"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="unified interface to mail representations"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libe/libemail-abstract-perl/libemail-abstract-perl_3.008-2.dsc http://ftp.debian.org/debian/pool/main/libe/libemail-abstract-perl/libemail-abstract-perl_3.008.orig.tar.gz http://ftp.debian.org/debian/pool/main/libe/libemail-abstract-perl/libemail-abstract-perl_3.008-2.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl libemail-mime-perl libemail-simple-perl libmail-box-perl libmailtools-perl libmime-tools-perl  libmro-compat-perl  "
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libemail-simple-perl  libmro-compat-perl"
+
+inherit dpkg

@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="librole-tiny-perl"
+VERSION="2.000006-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="Perl module for minimalist role composition"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libr/librole-tiny-perl/librole-tiny-perl_2.000006-1.dsc http://ftp.debian.org/debian/pool/main/libr/librole-tiny-perl/librole-tiny-perl_2.000006.orig.tar.gz http://ftp.debian.org/debian/pool/main/libr/librole-tiny-perl/librole-tiny-perl_2.000006-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libclass-method-modifiers-perl libnamespace-autoclean-perl libstrictures-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libclass-method-modifiers-perl perl"
+
+inherit dpkg

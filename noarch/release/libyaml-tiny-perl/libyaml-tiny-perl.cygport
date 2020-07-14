@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libyaml-tiny-perl"
+VERSION="1.73-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="Perl module for reading and writing YAML files"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/liby/libyaml-tiny-perl/libyaml-tiny-perl_1.73-1.dsc http://ftp.debian.org/debian/pool/main/liby/libyaml-tiny-perl/libyaml-tiny-perl_1.73.orig.tar.gz http://ftp.debian.org/debian/pool/main/liby/libyaml-tiny-perl/libyaml-tiny-perl_1.73-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libjson-maybexs-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl"
+
+inherit dpkg
