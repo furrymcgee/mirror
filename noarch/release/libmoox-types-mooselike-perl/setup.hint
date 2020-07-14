@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-Module-Runtime perl-Scalar-List-Utils perl_base perl libmodule-runtime-perl libmoo-perl
+sdesc: "module providing some Moosish types and a type builder"
+ldesc: "module providing some Moosish types and a type builder"

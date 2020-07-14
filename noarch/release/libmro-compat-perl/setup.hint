@@ -1,0 +1,4 @@
+category: perl
+requires:  perl libclass-c3-perl
+sdesc: "mro::* interface compatibility for Perls < 5.9.5"
+ldesc: "mro::* interface compatibility for Perls < 5.9.5"

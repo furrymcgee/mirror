@@ -1,0 +1,4 @@
+category: devel
+requires: perl_base perl debhelper autoconf automake autopoint libtool
+sdesc: "debhelper add-on to call autoreconf and clean up after the build"
+ldesc: "debhelper add-on to call autoreconf and clean up after the build"

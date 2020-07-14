@@ -1,0 +1,4 @@
+category: admin
+requires: perl perl-Carp perl-CGI perl-gettext perl-Text-CharWidth perl_base python python3 
+sdesc: "Debian configuration management system"
+ldesc: "Debian configuration management system"

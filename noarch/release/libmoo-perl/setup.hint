@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-Digest-SHA perl-Module-Runtime perl-Scalar-List-Utils perl_base perl libclass-method-modifiers-perl libdevel-globaldestruction-perl libimport-into-perl libmodule-runtime-perl librole-tiny-perl libstrictures-perl libsub-quote-perl
+sdesc: "Minimalist Object Orientation library (with Moose compatibility)"
+ldesc: "Minimalist Object Orientation library (with Moose compatibility)"

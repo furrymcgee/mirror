@@ -1,0 +1,4 @@
+category: Devel
+requires: cygwin libclang3.8 libgcc1 libiconv2 libstdc++6 
+sdesc: "A documentation system for C++, C, Java, Objective-C, IDL (Corba and Microsoft flavours) and to some extent PHP, C#, and D"
+ldesc: "Doxygen is a documentation system for C++, C, Java, Objective-C, IDL (Corba and Microsoft flavours) and to some extent PHP, C#, and D."

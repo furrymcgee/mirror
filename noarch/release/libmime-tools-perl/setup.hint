@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-MailTools perl-MIME-tools perl_base libconvert-binhex-perl libmailtools-perl perl
+sdesc: "Perl5 modules for MIME-compliant messages"
+ldesc: "Perl5 modules for MIME-compliant messages"

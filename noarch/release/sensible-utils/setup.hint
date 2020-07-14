@@ -1,0 +1,4 @@
+category: utils
+requires: bash 
+sdesc: "Utilities for sensible alternative selection"
+ldesc: "Utilities for sensible alternative selection"

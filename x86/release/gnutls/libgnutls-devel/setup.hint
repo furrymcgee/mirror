@@ -1,0 +1,9 @@
+category: Net Devel Libs
+requires: libffi-devel libgmp-devel libgnutls28 libiconv-devel libintl-devel libnettle-devel libp11-kit-devel libtasn1-devel zlib-devel 
+sdesc: "Library implementing TLS 1.0 and SSL 3.0 protocols (development)"
+ldesc: "GnuTLS is a secure communications library implementing the SSL,
+TLS and DTLS protocols and technologies around them. It provides a simple C
+language application programming interface (API) to access the secure
+communications protocols as well as APIs to parse and write X.509, PKCS#12,
+OpenPGP and other required structures."
+external-source: gnutls

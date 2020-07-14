@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-Module-Runtime perl-Scalar-List-Utils perl libdevel-stacktrace-perl libmodule-runtime-perl libmoo-perl
+sdesc: "role for classes that can be thrown"
+ldesc: "role for classes that can be thrown"

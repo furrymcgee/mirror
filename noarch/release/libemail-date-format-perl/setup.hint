@@ -1,0 +1,4 @@
+category: perl
+requires: perl_base perl
+sdesc: "Module to generate RFC-2822-valid date strings"
+ldesc: "Module to generate RFC-2822-valid date strings"

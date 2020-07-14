@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base perl
+sdesc: "Perl module to parse a MIME Content-Type header"
+ldesc: "Perl module to parse a MIME Content-Type header"

@@ -1,0 +1,4 @@
+category: admin
+requires: bash cygwin libbz2_1 libgcc1 libintl8 liblzma5 libncursesw10 perl perl-Carp perl-gettext perl-Scalar-List-Utils perl_base zlib0 tar
+sdesc: "Debian package management system"
+ldesc: "Debian package management system"

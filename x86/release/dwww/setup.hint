@@ -1,0 +1,4 @@
+category: doc
+requires: bash cygwin perl perl-MIME-Types perl_base  debianutils doc-base file libfile-ncopy-perl libmime-types-perl man-db mime-support ucf  perl libc6
+sdesc: "Read all on-line documentation with a WWW browser"
+ldesc: "Read all on-line documentation with a WWW browser"

@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-MIME-Types perl-Module-Runtime perl-Scalar-List-Utils perl_base perl libemail-address-xs-perl libemail-messageid-perl libemail-simple-perl libemail-mime-contenttype-perl libemail-mime-encodings-perl libmime-types-perl libmodule-runtime-perl
+sdesc: "module for simple MIME message parsing"
+ldesc: "module for simple MIME message parsing"

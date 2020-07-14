@@ -1,0 +1,4 @@
+category: devel
+requires: perl-XML-Parser perl_base gettext perl
+sdesc: "Help i18n of RFC822 compliant config files"
+ldesc: "Help i18n of RFC822 compliant config files"

@@ -1,0 +1,4 @@
+category: text
+requires: perl_base unzip
+sdesc: "Convert Microsoft OOXML files to plain text"
+ldesc: "Convert Microsoft OOXML files to plain text"

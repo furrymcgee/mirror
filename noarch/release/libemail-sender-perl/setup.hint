@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl-Carp perl-Module-Runtime perl-Scalar-List-Utils perl-Try-Tiny perl_base libcapture-tiny-perl libemail-abstract-perl libemail-address-xs-perl libemail-simple-perl  libmodule-runtime-perl libmoo-perl libmoox-types-mooselike-perl libsub-exporter-perl libthrowable-perl libtry-tiny-perl perl
+sdesc: "Perl module for sending email"
+ldesc: "Perl module for sending email"

@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl-Carp perl_base perl  
+sdesc: "framework for building and installing Perl modules"
+ldesc: "framework for building and installing Perl modules"

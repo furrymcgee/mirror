@@ -1,0 +1,4 @@
+category: perl
+requires: cygwin libssp0 perl perl-Carp perl-HTML-Parser perl_base perl perlapi-5.28.1 libc6 perl libhtml-parser-perl 
+sdesc: "Perl tool for determining code coverage metrics"
+ldesc: "Perl tool for determining code coverage metrics"

@@ -1,0 +1,4 @@
+category: database
+requires: cygwin libgcc1 libintl8 libuuid1 libc6 libgcrypt20 libgpg-error0 libreadline7 librec1
+sdesc: "text-based databases called recfiles"
+ldesc: "text-based databases called recfiles"

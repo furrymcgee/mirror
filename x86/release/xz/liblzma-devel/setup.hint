@@ -1,0 +1,6 @@
+category: Libs
+requires: liblzma5 
+sdesc: "LZMA de/compressor library (development)"
+ldesc: "XZ Utils is free general-purpose data compression software with
+high compression ratio. XZ Utils are the successor to LZMA Utils."
+external-source: xz

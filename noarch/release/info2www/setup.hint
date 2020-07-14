@@ -1,0 +1,4 @@
+category: doc
+requires: perl_base perl 
+sdesc: "Read info files with a WWW browser"
+ldesc: "Read info files with a WWW browser"

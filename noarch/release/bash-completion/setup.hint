@@ -1,0 +1,5 @@
+category: Shells
+requires:  bash
+sdesc: "Command auto-completion for Bash shell"
+ldesc: "bash-completion is a collection of shell functions that take
+advantage of the programmable completion feature of bash."

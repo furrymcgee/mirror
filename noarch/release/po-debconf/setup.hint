@@ -1,0 +1,4 @@
+category: devel
+requires: bash perl perl_base gettext intltool-debian perl sensible-utils
+sdesc: "tool for managing templates file translations with gettext"
+ldesc: "tool for managing templates file translations with gettext"

@@ -1,0 +1,4 @@
+category: perl
+requires: perl_base perl libsub-exporter-progressive-perl
+sdesc: "module to expose the flag that marks global destruction"
+ldesc: "module to expose the flag that marks global destruction"

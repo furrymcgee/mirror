@@ -1,0 +1,7 @@
+category: Perl
+requires: perl_base 
+sdesc: "Perl distribution Sub-Exporter-Progressive"
+ldesc: "Perl distribution Sub-Exporter-Progressive, providing Perl modules:
+Sub::Exporter::Progressive.
+
+Only use Sub::Exporter if you need it."

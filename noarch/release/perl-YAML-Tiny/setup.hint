@@ -1,0 +1,7 @@
+category: Perl
+requires: perl_base 
+sdesc: "Perl distribution YAML-Tiny"
+ldesc: "Perl distribution YAML-Tiny, providing Perl modules:
+YAML::Tiny.
+
+Read/Write YAML files with as little code as possible."

@@ -1,0 +1,4 @@
+category: devel
+requires:  
+sdesc: "library of miscellaneous C functions"
+ldesc: "library of miscellaneous C functions"

@@ -1,0 +1,4 @@
+category: net
+requires: bash cygwin libgnutls28 libssp0 zlib0 libc6 libgnutls30 libident libpam0g zlib1g lsb-base
+sdesc: "lightweight Internet Relay Chat server"
+ldesc: "lightweight Internet Relay Chat server"

@@ -1,0 +1,4 @@
+category: Perl
+requires: perl-Carp perl_base 
+sdesc: "Perl distribution Module-Pluggable"
+ldesc: "Perl module for giving other modules the ability to have plugins"

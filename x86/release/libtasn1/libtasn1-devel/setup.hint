@@ -1,0 +1,6 @@
+category: Net Devel Libs
+requires: cygwin libtasn1_6 pkg-config 
+sdesc: "ASN.1 library (development)"
+ldesc: "A library for Abstract Syntax Notation One (ASN.1) and Distinguish
+Encoding Rules (DER) manipulation."
+external-source: libtasn1

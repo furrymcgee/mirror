@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Archive-Zip perl-Scalar-List-Utils perl_base 
+sdesc: "file non-deterministic information stripper — stand-alone tool"
+ldesc: "file non-deterministic information stripper — stand-alone tool"

@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl
+sdesc: "Perl library for unique mail Message-ID generation"
+ldesc: "Perl library for unique mail Message-ID generation"

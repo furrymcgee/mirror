@@ -1,0 +1,8 @@
+category: Perl
+requires: perl_base perl-Sub-Exporter-Progressive
+sdesc: "Perl distribution Devel-GlobalDestruction"
+ldesc: "Perl distribution Devel-GlobalDestruction, providing Perl modules:
+Devel::GlobalDestruction.
+
+Provides function returning the equivalent of ${^GLOBAL_PHASE} eq
+'DESTRUCT' for older perls."

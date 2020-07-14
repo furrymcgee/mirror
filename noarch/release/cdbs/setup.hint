@@ -1,0 +1,4 @@
+category: devel
+requires: bash perl_base python 
+sdesc: "common build system for Debian packages"
+ldesc: "common build system for Debian packages"

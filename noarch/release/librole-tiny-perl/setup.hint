@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base libclass-method-modifiers-perl perl
+sdesc: "Perl module for minimalist role composition"
+ldesc: "Perl module for minimalist role composition"

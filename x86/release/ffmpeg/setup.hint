@@ -1,0 +1,4 @@
+category: video
+requires: cygwin libbz2_1 libgcc1 libgnutls28 libiconv2 liblzma5 zlib0 libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 libc6 libpostproc55 libsdl2-2.0-0 libswresample3 libswscale5
+sdesc: "Tools for transcoding, streaming and playing of multimedia files"
+ldesc: "Tools for transcoding, streaming and playing of multimedia files"

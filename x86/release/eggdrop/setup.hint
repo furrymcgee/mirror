@@ -1,0 +1,4 @@
+category: net
+requires: bash cygwin tcl zlib0 libc6 libtcl8.6 zlib1g eggdrop-data
+sdesc: "Advanced IRC Robot"
+ldesc: "Advanced IRC Robot"

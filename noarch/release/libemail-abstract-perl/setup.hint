@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-MailTools perl-MIME-tools perl-Scalar-List-Utils perl libemail-simple-perl  libmro-compat-perl
+sdesc: "unified interface to mail representations"
+ldesc: "unified interface to mail representations"

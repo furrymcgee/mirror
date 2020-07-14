@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-IO-String perl_base perl libemail-mime-contenttype-perl libemail-mime-perl libemail-sender-perl libemail-simple-perl libio-all-perl libio-string-perl libole-storage-lite-perl
+sdesc: "module for reading Outlook .msg files"
+ldesc: "module for reading Outlook .msg files"

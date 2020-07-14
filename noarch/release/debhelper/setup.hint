@@ -1,0 +1,4 @@
+category: devel
+requires: perl-Carp perl-Digest-SHA perl_base autotools-dev dh-autoreconf dh-strip-nondeterminism dpkg dpkg-dev dwz file libdpkg-perl man-db po-debconf perl
+sdesc: "helper programs for debian/rules"
+ldesc: "helper programs for debian/rules"

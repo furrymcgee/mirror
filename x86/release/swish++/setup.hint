@@ -1,0 +1,4 @@
+category: web
+requires: cygwin libstdc++6 perl_base zlib0 libc6 libstdc++6 zlib1g perl
+sdesc: "Simple Document Indexing System for Humans: C++ version"
+ldesc: "Simple Document Indexing System for Humans: C++ version"

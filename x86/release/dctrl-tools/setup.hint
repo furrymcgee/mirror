@@ -1,0 +1,4 @@
+category: utils
+requires: bash cygwin libargp libintl8 libc6
+sdesc: "Command-line tools to process Debian package information"
+ldesc: "Command-line tools to process Debian package information"

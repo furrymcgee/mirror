@@ -1,0 +1,4 @@
+category: doc
+requires: perl-gettext perl-Scalar-List-Utils perl-YAML-Tiny perl_base libuuid-perl libyaml-tiny-perl
+sdesc: "utilities to manage online documentation"
+ldesc: "utilities to manage online documentation"

@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl-Scalar-List-Utils perl_base perl
+sdesc: "helper modules for subroutines"
+ldesc: "helper modules for subroutines"

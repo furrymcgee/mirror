@@ -1,0 +1,4 @@
+category: devel
+requires: bash debhelper perl_base 
+sdesc: "Update infrastructure for config.{guess,sub} files"
+ldesc: "Update infrastructure for config.{guess,sub} files"

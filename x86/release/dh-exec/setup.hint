@@ -1,0 +1,4 @@
+category: devel
+requires: cygwin libpipeline1 perl_base libc6 libpipeline1 perl perl debhelper libdpkg-perl
+sdesc: "Scripts to help with executable debhelper files"
+ldesc: "Scripts to help with executable debhelper files"
