@@ -1,0 +1,34 @@
+From 2ff3bda04308b95ab88a78795f236eb13eb00d30 Mon Sep 17 00:00:00 2001
+From: furrymcgee <furrymcgee@lippydanger.jumpingcrab.com>
+Date: Wed, 1 Jul 2020 20:00:00 +0200
+Subject: [PATCH] index on (no branch): 8602afe Initial commit
+
+---
+ debian/dirs  | 2 +-
+ debian/rules | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git info2www/debian/dirs info2www/debian/dirs
+index b92ec87..ba6a448 100644
+--- info2www/debian/dirs
++++ info2www/debian/dirs
+@@ -1,2 +1,2 @@
+-usr/lib/cgi-bin
++srv/www/cgi-bin
+ var/lib/info2www
+diff --git info2www/debian/rules info2www/debian/rules
+index db1e93c..25def22 100755
+--- info2www/debian/rules
++++ info2www/debian/rules
+@@ -7,7 +7,7 @@ DEB_INSTALL_MANPAGES_info2www := debian/info2www.1
+ 
+ binary-post-install/info2www::
+ 	# Install the CGI script.
+-	install info2www debian/info2www/usr/lib/cgi-bin/
++	install info2www debian/info2www/srv/www/cgi-bin/
+ 	# Install the HTML file.
+ 	install info2www.html debian/info2www/var/lib/info2www
+ 	# Install the uuencoded PNG images.
+-- 
+2.20.1
+

@@ -1,0 +1,50 @@
+From 01f3deed54bb61f24949827b087351c2292249bd Mon Sep 17 00:00:00 2001
+From: furrymcgee <furrymcgee@lippydanger.jumpingcrab.com>
+Date: Mon, 8 Jun 2020 20:00:00 +0200
+Subject: [PATCH] index on (no branch): d59e9f39 Declare fast forward from
+ 1.5.71
+
+---
+ Makefile     | 4 ++--
+ debian/rules | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git debconf/Makefile debconf/Makefile
+index 37385f21..c8ff6adc 100644
+--- debconf/Makefile
++++ debconf/Makefile
+@@ -1,4 +1,4 @@
+-MUNGE=xargs perl -i.bak -ne ' \
++MUNGE=xargs -L1 perl -i.bak -ne ' \
+ 		print $$_."\# This file was preprocessed, do not edit!\n" \
+ 			if m:^\#!/usr/bin/perl:; \
+ 		$$cutting=1 if /^=/; \
+@@ -33,7 +33,7 @@ install-i18n:
+ 	$(MAKE) -C po install
+ 
+ PERL := perl
+-PERL_VENDORLIB := $(shell $(PERL) -MConfig -e 'print $$Config{vendorlib}')
++PERL_VENDORLIB := //$(shell $(PERL) -MConfig -e 'print $$Config{vendorlib}')
+ 
+ # This would probably be easier if we used setup.py ...
+ PYTHON2_SUPPORTED := $(shell pyversions -s)
+diff --git debconf/debian/rules debconf/debian/rules
+index 05985d2a..e19017e9 100755
+--- debconf/debian/rules
++++ debconf/debian/rules
+@@ -2,10 +2,10 @@
+ 
+ # Ensure that builds are self-hosting, which means I have to use the .pm
+ # files in this package, not any that may be on the system.
+-export PERL5LIB=.
++export PERL5LIB:=.:$(PERL5LIB)
+ 
+ %:
+-	dh $@ --with python2,python3
++	dh $@
+ 
+ override_dh_auto_install:
+ 	$(MAKE) prefix=`pwd`/debian/debconf-utils install-utils
+-- 
+2.20.1
+

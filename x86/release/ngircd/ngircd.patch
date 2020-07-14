@@ -1,0 +1,13 @@
+diff -ru src/ngircd/debian/rules origsrc/ngircd/debian/rules
+--- src/ngircd/debian/rules	2017-08-18 07:44:48.000000000 -0700
++++ origsrc/ngircd/debian/rules	2020-07-08 16:45:29.001820800 -0700
+@@ -15,9 +15,6 @@
+ 	    --infodir=\$${prefix}/share/info \
+ 	    --sysconfdir=/etc/ngircd \
+ 	    --with-gnutls \
+-	    --with-ident \
+-	    --with-pam \
+-	    --enable-ipv6
+ 
+ override_dh_auto_install:
+ 	dh_auto_install

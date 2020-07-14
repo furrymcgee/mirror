@@ -1,0 +1,302 @@
+--- src/ffmpeg/configure	2020-07-07 21:46:56.524414400 -0700
++++ origsrc/ffmpeg/configure	2020-07-07 21:42:19.115520000 -0700
+@@ -2180,7 +2180,6 @@
+ "
+ 
+ SYSTEM_LIBRARIES="
+-    bcrypt
+     vaapi_drm
+     vaapi_x11
+     vdpau_x11
+--- src/ffmpeg/debian/ffmpeg.install	2019-05-19 08:17:54.000000000 -0700
++++ origsrc/ffmpeg/debian/ffmpeg.install	2020-07-06 17:49:33.000436800 -0700
+@@ -3,4 +3,3 @@
+ usr/share/ffmpeg/*.ffpreset
+ usr/share/ffmpeg/*.xsd
+ RELEASE_NOTES						usr/share/doc/ffmpeg
+-debian/standard/tools/qt-faststart	usr/bin
+--- src/ffmpeg/debian/ffmpeg-doc.install	2020-07-06 17:49:05.691168000 -0700
++++ origsrc/ffmpeg/debian/ffmpeg-doc.install	2020-07-06 16:36:23.588772800 -0700
+@@ -1,6 +1,5 @@
+ debian/standard/doc/doxy/html/*		usr/share/doc/ffmpeg/api
+ usr/share/doc/ffmpeg/*.html		usr/share/doc/ffmpeg/manual
+-debian/standard/doc/style.min.css	usr/share/doc/ffmpeg/manual
+ doc/APIchanges				usr/share/doc/ffmpeg/developer-info
+ doc/*.txt				usr/share/doc/ffmpeg/developer-info
+ usr/share/man/man3
+--- src/ffmpeg/debian/libavcodec58.install	2020-07-07 12:13:02.620892800 -0700
++++ origsrc/ffmpeg/debian/libavcodec58.install	2020-07-07 12:27:21.866427200 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavcodec.so.*
++usr/bin/cygavcodec*
++usr/lib/*/libavcodec*
+--- src/ffmpeg/debian/libavcodec-dev.install	2020-07-07 12:13:02.620892800 -0700
++++ origsrc/ffmpeg/debian/libavcodec-dev.install	2020-07-07 12:27:57.677921600 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavcodec
+-usr/lib/*/libavcodec*.a
+-usr/lib/*/libavcodec*.so
++usr/bin/cygavcodec*
++usr/lib/*/libavcodec*
+ usr/lib/*/pkgconfig/libavcodec*.pc
+--- src/ffmpeg/debian/libavcodec-extra58.install	2020-07-07 12:13:02.620892800 -0700
++++ origsrc/ffmpeg/debian/libavcodec-extra58.install	2020-07-07 12:28:18.387700800 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavcodec.so.*
++usr/bin/cygavcodec*
++usr/lib/*/libavcodec*
+--- src/ffmpeg/debian/libavdevice58.install	2020-07-07 12:13:02.620892800 -0700
++++ origsrc/ffmpeg/debian/libavdevice58.install	2020-07-07 12:28:25.117377600 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavdevice.so.*
++usr/bin/cygavdevice*
++usr/lib/*/libavdevice*
+--- src/ffmpeg/debian/libavdevice-dev.install	2020-07-07 12:13:02.630907200 -0700
++++ origsrc/ffmpeg/debian/libavdevice-dev.install	2020-07-07 12:28:35.742656000 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavdevice
+-usr/lib/*/libavdevice*.a
+-usr/lib/*/libavdevice*.so
++usr/bin/cygavdevice*
++usr/lib/*/libavdevice*
+ usr/lib/*/pkgconfig/libavdevice*.pc
+--- src/ffmpeg/debian/libavfilter7.install	2020-07-07 12:13:02.630907200 -0700
++++ origsrc/ffmpeg/debian/libavfilter7.install	2020-07-07 12:28:44.375068800 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavfilter.so.*
++usr/bin/cygavfilter*
++usr/lib/*/libavfilter*
+--- src/ffmpeg/debian/libavfilter-dev.install	2020-07-07 12:13:02.630907200 -0700
++++ origsrc/ffmpeg/debian/libavfilter-dev.install	2020-07-07 12:28:53.968864000 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavfilter
+-usr/lib/*/libavfilter*.a
+-usr/lib/*/libavfilter*.so
++usr/bin/cygavfilter*
++usr/lib/*/libavfilter*
+ usr/lib/*/pkgconfig/libavfilter*.pc
+--- src/ffmpeg/debian/libavfilter-extra7.install	2020-07-07 12:13:02.630907200 -0700
++++ origsrc/ffmpeg/debian/libavfilter-extra7.install	2020-07-07 12:29:00.998972800 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavfilter.so.*
++usr/bin/cygavfilter*
++usr/lib/*/libavfilter*
+--- src/ffmpeg/debian/libavformat58.install	2020-07-07 12:13:02.640921600 -0700
++++ origsrc/ffmpeg/debian/libavformat58.install	2020-07-07 12:29:07.458260800 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavformat.so.*
++usr/bin/cygavformat*
++usr/lib/*/libavformat*
+--- src/ffmpeg/debian/libavformat-dev.install	2020-07-07 12:13:02.640921600 -0700
++++ origsrc/ffmpeg/debian/libavformat-dev.install	2020-07-07 12:29:19.175108800 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavformat
+-usr/lib/*/libavformat*.a
+-usr/lib/*/libavformat*.so
++usr/bin/cygavformat*
++usr/lib/*/libavformat*
+ usr/lib/*/pkgconfig/libavformat*.pc
+--- src/ffmpeg/debian/libavresample4.install	2020-07-07 12:13:02.640921600 -0700
++++ origsrc/ffmpeg/debian/libavresample4.install	2020-07-07 12:29:27.827550400 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavresample.so.*
++usr/bin/cygavresample*
++usr/lib/*/libavresample*
+--- src/ffmpeg/debian/libavresample-dev.install	2020-07-07 12:13:02.650936000 -0700
++++ origsrc/ffmpeg/debian/libavresample-dev.install	2020-07-07 12:29:38.352684800 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavresample
+-usr/lib/*/libavresample*.a
+-usr/lib/*/libavresample*.so
++usr/bin/cygavresample*
++usr/lib/*/libavresample*
+ usr/lib/*/pkgconfig/libavresample*.pc
+--- src/ffmpeg/debian/libavutil56.install	2020-07-07 12:13:02.650936000 -0700
++++ origsrc/ffmpeg/debian/libavutil56.install	2020-07-07 12:29:44.952174400 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libavutil.so.*
++usr/bin/cygavutil*
++usr/lib/*/libavutil*
+--- src/ffmpeg/debian/libavutil-dev.install	2020-07-07 12:13:02.650936000 -0700
++++ origsrc/ffmpeg/debian/libavutil-dev.install	2020-07-07 12:29:54.565998400 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libavutil
+-usr/lib/*/libavutil*.a
+-usr/lib/*/libavutil*.so
++usr/bin/cygavutil*
++usr/lib/*/libavutil*
+ usr/lib/*/pkgconfig/libavutil*.pc
+--- src/ffmpeg/debian/libpostproc55.install	2020-07-07 12:13:02.660950400 -0700
++++ origsrc/ffmpeg/debian/libpostproc55.install	2020-07-07 12:30:01.115416000 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libpostproc.so.*
++usr/bin/cygpostproc*
++usr/lib/*/libpostproc*
+--- src/ffmpeg/debian/libpostproc-dev.install	2020-07-07 12:13:02.660950400 -0700
++++ origsrc/ffmpeg/debian/libpostproc-dev.install	2020-07-07 12:30:08.966705600 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libpostproc
+-usr/lib/*/libpostproc*.a
+-usr/lib/*/libpostproc*.so
++usr/bin/cygpostproc*
++usr/lib/*/libpostproc*
+ usr/lib/*/pkgconfig/libpostproc*.pc
+--- src/ffmpeg/debian/libswresample3.install	2020-07-07 12:13:02.660950400 -0700
++++ origsrc/ffmpeg/debian/libswresample3.install	2020-07-07 12:30:17.719291200 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libswresample.so.*
++usr/bin/cygswresample*
++usr/lib/*/libswresample*
+--- src/ffmpeg/debian/libswresample-dev.install	2020-07-07 12:13:02.660950400 -0700
++++ origsrc/ffmpeg/debian/libswresample-dev.install	2020-07-07 12:30:28.975476800 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libswresample
+-usr/lib/*/libswresample*.a
+-usr/lib/*/libswresample*.so
++usr/bin/cygswresample*
++usr/lib/*/libswresample*
+ usr/lib/*/pkgconfig/libswresample*.pc
+--- src/ffmpeg/debian/libswscale5.install	2020-07-07 12:13:02.670964800 -0700
++++ origsrc/ffmpeg/debian/libswscale5.install	2020-07-07 12:30:39.049963200 -0700
+@@ -1 +1,2 @@
+-usr/lib/*/libswscale.so.*
++usr/bin/cygswscale*
++usr/lib/*/libswscale*
+--- src/ffmpeg/debian/libswscale-dev.install	2020-07-07 12:13:02.670964800 -0700
++++ origsrc/ffmpeg/debian/libswscale-dev.install	2020-07-07 12:30:50.085832000 -0700
+@@ -1,4 +1,4 @@
+ usr/include/*/libswscale
+-usr/lib/*/libswscale*.a
+-usr/lib/*/libswscale*.so
++usr/bin/cygswscale*
++usr/lib/*/libswscale*
+ usr/lib/*/pkgconfig/libswscale*.pc
+--- src/ffmpeg/debian/rules	2020-07-08 16:40:24.584089600 -0700
++++ origsrc/ffmpeg/debian/rules	2020-07-08 16:41:16.889300800 -0700
+@@ -14,10 +14,12 @@
+ # Ubuntu ld adds -Bsymbolic-functions by default, but that prevents FFmpeg from building.
+ export DEB_LDFLAGS_MAINT_STRIP=-Wl,-Bsymbolic-functions
+ 
++export DEB_BUILD_PROFILES?=pkg.ffmpeg.stage1
++
+ # Package name for the extra flavor.
+ SHLIB_PKGS := $(shell sed -nr '/extra/! s/^Package:[[:space:]]*(lib.*[0-9]+)[[:space:]]*$$/\1/p' debian/control)
+ EXTRA_PKGS := $(shell sed -nr 's/^Package:[[:space:]]*(.*extra[0-9]+)[[:space:]]*$$/\1/p' debian/control)
+-FLAVORS = standard extra static
++FLAVORS = standard
+ 
+ # Enable as many features as possible, as long as the result is still GPLv2+ (a GPLv3+ variant is built as libavcodec-extra/libavfilter-extra flavor).
+ # The following flags (and build-dependencies) are not added, because they would require a libavformat-extra flavor:
+@@ -48,60 +50,16 @@
+ #   --enable-opencv                 Does not build with OpenCV >= 3.4
+ CONFIG := --prefix=/usr \
+ 	--extra-version="$(DEB_REVISION)" \
+-	--toolchain=hardened \
++	--disable-asm \
+ 	--libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
+ 	--incdir=/usr/include/$(DEB_HOST_MULTIARCH) \
+ 	--arch=$(DEB_HOST_ARCH_CPU) \
+ 	--enable-gpl \
+ 	--disable-stripping \
+-	--enable-avresample --disable-filter=resample \
++	--enable-avresample \
++	--disable-filter=resample \
+ 	--enable-avisynth \
+ 	--enable-gnutls \
+-	--enable-ladspa \
+-	--enable-libaom \
+-	--enable-libass \
+-	--enable-libbluray \
+-	--enable-libbs2b \
+-	--enable-libcaca \
+-	--enable-libcdio \
+-	--enable-libcodec2 \
+-	--enable-libflite \
+-	--enable-libfontconfig \
+-	--enable-libfreetype \
+-	--enable-libfribidi \
+-	--enable-libgme \
+-	--enable-libgsm \
+-	--enable-libjack \
+-	--enable-libmp3lame \
+-	--enable-libmysofa \
+-	--enable-libopenjpeg \
+-	--enable-libopenmpt \
+-	--enable-libopus \
+-	--enable-libpulse \
+-	--enable-librsvg \
+-	--enable-librubberband \
+-	--enable-libshine \
+-	--enable-libsnappy \
+-	--enable-libsoxr \
+-	--enable-libspeex \
+-	--enable-libssh \
+-	--enable-libtheora \
+-	--enable-libtwolame \
+-	--enable-libvidstab \
+-	--enable-libvorbis \
+-	--enable-libvpx \
+-	--enable-libwavpack \
+-	--enable-libwebp \
+-	--enable-libx265 \
+-	--enable-libxml2 \
+-	--enable-libxvid \
+-	--enable-libzmq \
+-	--enable-libzvbi \
+-	--enable-lv2 \
+-	--enable-omx \
+-	--enable-openal \
+-	--enable-opengl \
+-	--enable-sdl2
+ 
+ # The standard configuration only uses the shared CONFIG.
+ CONFIG_standard = --enable-shared
+@@ -212,7 +170,7 @@
+ 
+ # Use the default debhelper scripts, where possible.
+ %:
+-	dh $@
++	dh $@ --sourcedirectory=debian/standard
+ 
+ # Add configuration options:
+ override_dh_auto_configure:
+@@ -231,7 +189,6 @@
+ 	#  leave set O_NONBLOCK on stderr, we pipe stderr through cat which will
+ 	#  create a temporary pipe so this doesn't break the rest of the build.
+ 	#  See: #895154
+-	(lessc debian/missing-sources/ffmpeg-web/src/less/style.less | cleancss > debian/standard/doc/style.min.css) 2>&1 | cat >&2
+ 
+ override_dh_auto_build-arch:
+ 	# Copy built object files to avoid building them again for the extra flavor.
+@@ -247,9 +204,6 @@
+ 			rm debian/"$$flavor"/libavcodec/allcodecs.o; \
+ 			rm debian/"$$flavor"/libavfilter/allfilters.o; \
+ 		fi; \
+-		if [ "$$flavor" = "standard" ]; then \
+-			$(MAKE) -C debian/standard tools/qt-faststart; \
+-		fi; \
+ 		dh_auto_build -a --sourcedirectory=debian/"$$flavor" || (cat debian/"$$flavor"/config.log && exit 1); \
+ 	done
+ 
+@@ -267,21 +221,14 @@
+ 	install -d debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/altivec
+ 	install -m 644 debian/altivec/*/*.so.* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/altivec
+ endif
+-	dh_auto_install -a --sourcedirectory=debian/extra --destdir=debian/tmp/extra
+ ifeq ($(DEB_HOST_ARCH),powerpc)
+ 	install -d debian/tmp/extra/usr/lib/$(DEB_HOST_MULTIARCH)/altivec
+ 	install -m 644 debian/altivec-extra/*/*.so.* debian/tmp/extra/usr/lib/$(DEB_HOST_MULTIARCH)/altivec
+ endif
+-	# Use the static libraries from the --disable-pic build
+-	install -m 644 debian/static/*/lib*.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)
+ 
+ override_dh_auto_install-indep:
+ 	$(MAKE) -C debian/standard DESTDIR=$(CURDIR)/debian/tmp install-doc install-examples
+ 
+-override_dh_install:
+-	dh_install $(addprefix -p,$(EXTRA_PKGS)) --sourcedir=debian/tmp/extra
+-	dh_install --remaining-packages
+-
+ override_dh_shlibdeps:
+ 	$(RM) debian/shlibs.local
+ 	set -e && for pkg in $(SHLIB_PKGS); do \
