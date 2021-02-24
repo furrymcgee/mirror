@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="public-inbox"
+VERSION="1.6.0-1"
+RELEASE=1
+CATEGORY="mail"
+SUMMARY="Mailing list archiver"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/p/public-inbox/public-inbox_1.6.0-1.dsc http://ftp.debian.org/debian/pool/main/p/public-inbox/public-inbox_1.6.0.orig.tar.gz http://ftp.debian.org/debian/pool/main/p/public-inbox/public-inbox_1.6.0-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl git libdbd-sqlite3-perl libemail-mime-perl libnet-server-perl libplack-perl libsearch-xapian-perl xapian-tools"
+
+inherit dpkg

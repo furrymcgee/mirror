@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libdevel-stacktrace-ashtml-perl"
+VERSION="0.15-1.1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="module to display a stack trace in HTML"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libd/libdevel-stacktrace-ashtml-perl/libdevel-stacktrace-ashtml-perl_0.15-1.1.dsc http://ftp.debian.org/debian/pool/main/libd/libdevel-stacktrace-ashtml-perl/libdevel-stacktrace-ashtml-perl_0.15.orig.tar.gz http://ftp.debian.org/debian/pool/main/libd/libdevel-stacktrace-ashtml-perl/libdevel-stacktrace-ashtml-perl_0.15-1.1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="perl libdevel-stacktrace-perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libdevel-stacktrace-perl"
+
+inherit dpkg

@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libmodule-build-tiny-perl"
+VERSION="0.039-1.1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="tiny replacement for Module::Build"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libm/libmodule-build-tiny-perl/libmodule-build-tiny-perl_0.039-1.1.dsc http://ftp.debian.org/debian/pool/main/libm/libmodule-build-tiny-perl/libmodule-build-tiny-perl_0.039.orig.tar.gz http://ftp.debian.org/debian/pool/main/libm/libmodule-build-tiny-perl/libmodule-build-tiny-perl_0.039-1.1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libextutils-config-perl libextutils-helpers-perl libextutils-installpaths-perl    perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libextutils-config-perl libextutils-helpers-perl libextutils-installpaths-perl   "
+
+inherit dpkg
