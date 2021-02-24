@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="vifm"
+VERSION="0.7.8-3"
+RELEASE=1
+CATEGORY="utils"
+SUMMARY="flexible vi-like file manager using ncurses"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/v/vifm/vifm_0.7.8-3.dsc http://ftp.debian.org/debian/pool/main/v/vifm/vifm_0.7.8.orig.tar.bz2 http://ftp.debian.org/debian/pool/main/v/vifm/vifm_0.7.8-3.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI="vifm.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="i686"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="libc6 libmagic1 libncursesw5 libtinfo5"
+
+inherit dpkg

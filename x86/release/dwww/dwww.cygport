@@ -1,7 +1,7 @@
 # THIS IS A GENERATED CYGPORT FILE 
 NAME="dwww"
 VERSION="1.13.4+nmu3"
-RELEASE=1
+RELEASE=2
 CATEGORY="doc"
 SUMMARY="Read all on-line documentation with a WWW browser"
 DESCRIPTION=""

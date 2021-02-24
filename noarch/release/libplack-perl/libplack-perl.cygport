@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="libplack-perl"
+VERSION="1.0048-1"
+RELEASE=1
+CATEGORY="perl"
+SUMMARY="interface between web servers and Perl web applications"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/libp/libplack-perl/libplack-perl_1.0048-1.dsc http://ftp.debian.org/debian/pool/main/libp/libplack-perl/libplack-perl_1.0048.orig.tar.gz http://ftp.debian.org/debian/pool/main/libp/libplack-perl/libplack-perl_1.0048-1.debian.tar.xz"
+SRC_DIR="."
+PATCH_URI=""
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND="libapache-logformat-compiler-perl libauthen-simple-passwd-perl libcgi-compile-perl libcgi-emulate-psgi-perl libcgi-pm-perl libcookie-baker-perl libdevel-stacktrace-ashtml-perl libdevel-stacktrace-perl libfcgi-perl libfcgi-procmanager-perl libfile-sharedir-install-perl libfile-sharedir-perl libfilesys-notify-simple-perl libhash-multivalue-perl libhttp-entity-parser-perl libhttp-headers-fast-perl libhttp-message-perl libhttp-request-ascgi-perl libhttp-tiny-perl libio-handle-util-perl liblog-dispatch-array-perl liblog-log4perl-perl libmime-types-perl libmodule-refresh-perl libstream-buffered-perl libtest-requires-perl libtest-tcp-perl libtry-tiny-perl liburi-perl libwww-form-urlencoded-perl libwww-perl perl"
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="perl libapache-logformat-compiler-perl libcookie-baker-perl libdevel-stacktrace-ashtml-perl libdevel-stacktrace-perl libfile-sharedir-perl libfilesys-notify-simple-perl libhash-multivalue-perl libhttp-entity-parser-perl libhttp-headers-fast-perl libhttp-message-perl libhttp-tiny-perl libstream-buffered-perl libtest-tcp-perl libtry-tiny-perl liburi-perl libwww-form-urlencoded-perl"
+
+inherit dpkg
