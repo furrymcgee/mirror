@@ -1,0 +1,8 @@
+category: Net
+requires: python3 python3-pygments python3-requests python3-setuptools python3-urllib3 
+sdesc: "Command-line HTTP client for web services"
+ldesc: "HTTPie is a command line HTTP client. Its goal is to make CLI
+interaction with web services as human-friendly as possible. It provides a
+simple http command that allows for sending arbitrary HTTP requests using a
+simple and natural syntax, and displays colorized output. HTTPie can be used
+for testing, debugging, and generally interacting with HTTP servers."

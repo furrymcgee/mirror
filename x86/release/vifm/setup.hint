@@ -1,0 +1,4 @@
+category: utils
+requires: bash cygwin libgcc1 libncursesw10 libc6 libmagic1 libncursesw5 libtinfo5
+sdesc: "flexible vi-like file manager using ncurses"
+ldesc: "flexible vi-like file manager using ncurses"

@@ -1,0 +1,7 @@
+category: Text
+requires:  
+sdesc: "Source code syntax highlighter (data)"
+ldesc: "Highlight converts sourcecode to HTML, XHTML, RTF, LaTeX, TeX,
+SVG, BBCode and terminal escape sequences with coloured syntax highlighting.
+Language definitions and colour themes are customizable."
+external-source: highlight

@@ -1,0 +1,4 @@
+category: perl
+requires: perl_base perl
+sdesc: "wrapper around Perl's configuration hash"
+ldesc: "wrapper around Perl's configuration hash"

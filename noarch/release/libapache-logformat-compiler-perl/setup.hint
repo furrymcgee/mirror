@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base perl libposix-strftime-compiler-perl
+sdesc: "Perl module to pre-compile a LogFormat string"
+ldesc: "Perl module to pre-compile a LogFormat string"
