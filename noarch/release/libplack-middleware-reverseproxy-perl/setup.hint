@@ -1,0 +1,4 @@
+category: perl
+requires:  perl libplack-perl
+sdesc: "module supporting apps to run as a reverse proxy backend"
+ldesc: "module supporting apps to run as a reverse proxy backend"

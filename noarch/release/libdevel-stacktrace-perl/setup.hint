@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Scalar-List-Utils perl_base perl
+sdesc: "Perl module containing stack trace and related objects"
+ldesc: "Perl module containing stack trace and related objects"

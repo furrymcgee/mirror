@@ -1,0 +1,7 @@
+category: Python
+requires: python3 python3-imaging python3-pygments 
+sdesc: "Py3K reStructuredText processing module"
+ldesc: "Docutils is an open-source text processing system for
+processing plaintext documentation into useful formats, such as HTML or
+LaTeX. It includes reStructuredText, the easy to read, easy to use,
+what-you-see-is-what-you-get plaintext markup language."

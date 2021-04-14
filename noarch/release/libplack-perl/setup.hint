@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl-Carp perl-HTTP-Date perl-HTTP-Message perl-IO-Socket-SSL perl-MIME-Types perl-Scalar-List-Utils perl-Socket perl-Try-Tiny perl-URI perl_base perl libapache-logformat-compiler-perl libcookie-baker-perl libdevel-stacktrace-ashtml-perl libdevel-stacktrace-perl libfile-sharedir-perl libfilesys-notify-simple-perl libhash-multivalue-perl libhttp-entity-parser-perl libhttp-headers-fast-perl libhttp-message-perl libhttp-tiny-perl libstream-buffered-perl libtest-tcp-perl libtry-tiny-perl liburi-perl libwww-form-urlencoded-perl
+sdesc: "interface between web servers and Perl web applications"
+ldesc: "interface between web servers and Perl web applications"

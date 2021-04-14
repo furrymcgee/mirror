@@ -1,0 +1,5 @@
+category: Web
+requires: bash cygwin libgcc1 libiconv2 libintl8 libopenssl100 lua lua-crypto lua-ldap python python-pygments python3 python3-pygments zlib0 groff highlight sed
+sdesc: "Web frontend for git repositories"
+ldesc: "This is an attempt to create a fast web interface for the git scm,
+using a builtin cache to decrease server io-pressure."

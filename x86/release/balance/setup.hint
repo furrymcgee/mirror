@@ -1,0 +1,6 @@
+category: Net
+requires: cygwin
+sdesc: "TCP load-balancing proxy server"
+ldesc: "Balance is a simple but powerful generic tcp proxy with round robin
+load balancing and failover mechanisms. The program behaviour can
+be controlled at runtime using a simple command line syntax."

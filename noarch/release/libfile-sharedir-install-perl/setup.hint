@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base perl
+sdesc: "module for installing read-only data files"
+ldesc: "module for installing read-only data files"

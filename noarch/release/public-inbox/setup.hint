@@ -1,0 +1,4 @@
+category: mail
+requires: perl perl-Carp perl-DBD-SQLite perl-DBI perl-Digest-SHA perl-Encode perl-HTTP-Date perl-HTTP-Message perl-IO-Socket-SSL perl-Scalar-List-Utils perl-Socket perl-TimeDate perl-URI perl_base perl git libdbd-sqlite3-perl libemail-mime-perl libnet-server-perl libplack-perl libsearch-xapian-perl xapian-tools
+sdesc: "Mailing list archiver"
+ldesc: "Mailing list archiver"

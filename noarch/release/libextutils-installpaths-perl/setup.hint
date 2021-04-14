@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl-Carp perl_base perl libextutils-config-perl
+sdesc: "module to make Build.PL install path logic easy"
+ldesc: "module to make Build.PL install path logic easy"

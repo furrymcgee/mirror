@@ -1,0 +1,5 @@
+category: Python
+requires: python3 python3-six ca-certificates
+sdesc: "Python3 HTTP/HTTPS library"
+ldesc: "HTTP library for Python with thread-safe connection pooling,
+file post, and more."

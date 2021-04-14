@@ -1,0 +1,6 @@
+category: Text
+requires: cygwin libgcc1 libstdc++6 lua highlight-common
+sdesc: "Source code syntax highlighter"
+ldesc: "Highlight converts sourcecode to HTML, XHTML, RTF, LaTeX, TeX,
+SVG, BBCode and terminal escape sequences with coloured syntax highlighting.
+Language definitions and colour themes are customizable."

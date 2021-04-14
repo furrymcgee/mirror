@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base perl libclass-inspector-perl
+sdesc: "module to locate non-code files during run-time"
+ldesc: "module to locate non-code files during run-time"

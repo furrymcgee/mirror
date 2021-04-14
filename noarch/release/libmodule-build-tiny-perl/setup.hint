@@ -1,0 +1,4 @@
+category: perl
+requires: perl perl_base perl libextutils-config-perl libextutils-helpers-perl libextutils-installpaths-perl   
+sdesc: "tiny replacement for Module::Build"
+ldesc: "tiny replacement for Module::Build"

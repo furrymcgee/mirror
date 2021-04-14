@@ -1,0 +1,11 @@
+category: Perl
+requires: cygwin libgcc1 libsqlite3_0 libssp0 perl perl_base perl-DBI
+sdesc: "Perl distribution DBD-SQLite"
+ldesc: "Perl distribution DBD-SQLite, providing Perl modules:
+DBD::SQLite DBD::SQLite::Constants DBD::SQLite::VirtualTable
+DBD::SQLite::VirtualTable::Cursor DBD::SQLite::VirtualTable::FileContent
+DBD::SQLite::VirtualTable::FileContent::Cursor
+DBD::SQLite::VirtualTable::PerlData
+DBD::SQLite::VirtualTable::PerlData::Cursor.
+
+Self Contained SQLite RDBMS in a DBI Driver."

@@ -1,0 +1,35 @@
+category: Perl
+requires: cygwin libgcc1 libssp0 perl perl_base 
+sdesc: "Perl distribution DBI"
+ldesc: "Perl distribution DBI, providing Perl modules:
+Bundle::DBI DBD::DBM DBD::DBM::Statement DBD::DBM::Table DBD::DBM::db
+DBD::DBM::dr DBD::DBM::st DBD::ExampleP DBD::ExampleP::db DBD::ExampleP::dr
+DBD::ExampleP::st DBD::File DBD::File::DataSource::File
+DBD::File::DataSource::Stream DBD::File::Statement DBD::File::Table
+DBD::File::TableSource::FileSystem DBD::File::db DBD::File::dr
+DBD::File::st DBD::Gofer DBD::Gofer::Policy::Base
+DBD::Gofer::Policy::classic DBD::Gofer::Policy::pedantic
+DBD::Gofer::Policy::rush DBD::Gofer::Transport::Base
+DBD::Gofer::Transport::corostream DBD::Gofer::Transport::null
+DBD::Gofer::Transport::pipeone DBD::Gofer::Transport::stream DBD::Gofer::db
+DBD::Gofer::dr DBD::Gofer::st DBD::NullP DBD::NullP::db DBD::NullP::dr
+DBD::NullP::st DBD::Proxy DBD::Proxy::RPC::PlClient DBD::Proxy::db
+DBD::Proxy::dr DBD::Proxy::st DBD::Sponge DBD::Sponge::db DBD::Sponge::dr
+DBD::Sponge::st DBDI DBI DBI::Const::GetInfo::ANSI
+DBI::Const::GetInfo::ODBC DBI::Const::GetInfoReturn DBI::Const::GetInfoType
+DBI::DBD DBI::DBD::Metadata DBI::DBD::SqlEngine
+DBI::DBD::SqlEngine::DataSource DBI::DBD::SqlEngine::Statement
+DBI::DBD::SqlEngine::Table DBI::DBD::SqlEngine::TableSource
+DBI::DBD::SqlEngine::TieMeta DBI::DBD::SqlEngine::TieTables
+DBI::DBD::SqlEngine::db DBI::DBD::SqlEngine::dr DBI::DBD::SqlEngine::st
+DBI::Gofer::Execute DBI::Gofer::Request DBI::Gofer::Response
+DBI::Gofer::Serializer::Base DBI::Gofer::Serializer::DataDumper
+DBI::Gofer::Serializer::Storable DBI::Gofer::Transport::Base
+DBI::Gofer::Transport::pipeone DBI::Gofer::Transport::stream DBI::Profile
+DBI::ProfileData DBI::ProfileDumper DBI::ProfileDumper::Apache
+DBI::ProfileSubs DBI::ProxyServer DBI::ProxyServer::db DBI::ProxyServer::dr
+DBI::ProxyServer::st DBI::SQL::Nano DBI::SQL::Nano::Statement_
+DBI::SQL::Nano::Table_ DBI::Util::CacheMemory DBI::Util::_accessor
+DBI::common.
+
+Database independent interface for Perl."

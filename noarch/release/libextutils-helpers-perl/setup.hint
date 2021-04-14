@@ -1,0 +1,4 @@
+category: perl
+requires: perl-Carp perl_base perl
+sdesc: "various portability utilities for module builders"
+ldesc: "various portability utilities for module builders"

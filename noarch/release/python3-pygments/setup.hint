@@ -1,0 +1,7 @@
+category: Python
+requires: python3 python3-chardet python3-docutils python3-imaging python3-setuptools 
+sdesc: "Py3K syntax highlighting module"
+ldesc: "Pygments is a syntax highlighting package written in Python.
+It is a generic syntax highlighter for general use in all kinds of software
+such as forum systems, wikis or other applications that need to prettify
+source code."
