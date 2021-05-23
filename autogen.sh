@@ -1,10 +1,10 @@
 #!/bin/bash
 # Download setup.hint and create setup.ini
 0<<-'BASH' \
+9<<-'HINT' \
 17<<-'REQUIRED' \
 18<<-'EXTERNAL' \
 19<<'MAKE' \
-20<<-'HINT' \
 21<<-'SOURCE' \
 22<<-'SERVICES' \
 LANG=C.UTF-8 bash -x
@@ -12,6 +12,8 @@ LANG=C.UTF-8 bash -x
 	##### START SERVICES #####
 	# cygrunsrv -L | grep xinetd || bash <&22
 
+	export SITE=http://ftp.jaist.ac.jp/pub/cygwin
+	export SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2013/06/04/121035
 	export SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2016/08/30/104223 
 	test -d x86/release &&
 	test -d noarch/release ||
@@ -36,6 +38,11 @@ LANG=C.UTF-8 bash -x
 	sed s/^.// <&19 |
 	make -f - clean x86/release/custompackage-0.0.1-1 x86/setup.ini
 BASH
+	sdesc: "My custom package"
+	ldesc: "My custom package"
+	category: Base
+	requires: bzip2 cygwin-doc file less openssh pinfo rxvt wget
+HINT
 	# grep available packages from setup.ini
 	# join with downloaded packages
 	# download setup.ini
@@ -154,7 +161,7 @@ EXTERNAL
 
 	$(addsuffix /release/%,x86 x86_64):
 		mkdir $(dir $@)/$(PACKAGE) || true
-		cat > $(dir $@)/$(PACKAGE)/setup.hint <&20
+		cat > $(dir $@)/$(PACKAGE)/setup.hint <&9
 		tar -Jcf $(dir $@)/$(PACKAGE)/$(PACKAGE)-$(VERSION)-$(RELEASE).tar.xz  --files-from /dev/null
 		tar -Jcf $(dir $@)/$(PACKAGE)/$(PACKAGE)-$(VERSION)-$(RELEASE)-src.tar.xz --files-from /dev/null
 
@@ -183,11 +190,6 @@ EXTERNAL
 		find noarch x86 -name *.tar.* -a ! -name *-*-*.tar.* -delete
 
 MAKE
-	sdesc: "My custom package"
-	ldesc: "My custom package"
-	category: Base
-	requires: bzip2 cygwin-doc file less openssh pinfo rxvt wget
-HINT
 	libdconf1	./x86/release/dconf
 	libe2p2	./x86/release/e2fsprogs
 	libedit0	./x86/release/libedit
