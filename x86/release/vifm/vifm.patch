@@ -1,16 +1,63 @@
-From 80e9b7527a22316cf3251fb9b8ae8984e64a426f Mon Sep 17 00:00:00 2001
+From cea4ac78b27b6858d981f7121a7070195b452324 Mon Sep 17 00:00:00 2001
 From: furrymcgee <furrymcgee@lippydanger.jumpingcrab.com>
-Date: Sun, 23 May 2021 20:00:00 +0200
+Date: Mon, 24 May 2021 20:00:00 +0200
 Subject: [PATCH] index on (no branch): d326a3185 Version v0.7.8
 
 ---
- src/utils/path.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ src/filelist.c         | 4 ++--
+ src/utils/fs.c         | 2 +-
+ src/utils/path.c       | 6 +++---
+ tests/misc/canonical.c | 4 ++--
+ 4 files changed, 8 insertions(+), 8 deletions(-)
 
+diff --git vifm/src/filelist.c vifm/src/filelist.c
+index 2b3651198..4bbd39a03 100644
+--- vifm/src/filelist.c
++++ vifm/src/filelist.c
+@@ -2174,7 +2174,7 @@ change_directory(FileView *view, const char *directory)
+ 			snprintf(newdir, sizeof(newdir), "%c:%s", view->curr_dir[0], directory);
+ 		else
+ #endif
+-			snprintf(newdir, sizeof(newdir), "%s/%s", view->curr_dir, directory);
++			snprintf(newdir, sizeof(newdir), "%s//%s", view->curr_dir, directory);
+ 		canonicalize_path(newdir, dir_dup, sizeof(dir_dup));
+ 	}
+ 
+@@ -3790,7 +3790,7 @@ find_dir_in_cdpath(const char base_dir[], const char dst[], char buf[],
+ 	}
+ 	free(free_this);
+ 
+-	snprintf(buf, buf_size, "%s/%s", base_dir, dst);
++	snprintf(buf, buf_size, "%s//%s", base_dir, dst);
+ }
+ 
+ int
+diff --git vifm/src/utils/fs.c vifm/src/utils/fs.c
+index dd8976d28..91ee89ca0 100644
+--- vifm/src/utils/fs.c
++++ vifm/src/utils/fs.c
+@@ -159,7 +159,7 @@ path_exists_internal(const char *path, const char *filename)
+ 	}
+ 	else
+ 	{
+-		snprintf(full, sizeof(full), "%s/%s", path, filename);
++		snprintf(full, sizeof(full), "%s//%s", path, filename);
+ 		path_to_check = full;
+ 	}
+ #ifndef _WIN32
 diff --git vifm/src/utils/path.c vifm/src/utils/path.c
-index 34b2d9876..35070884e 100644
+index 34b2d9876..fe98c8dd4 100644
 --- vifm/src/utils/path.c
 +++ vifm/src/utils/path.c
+@@ -109,7 +109,7 @@ canonicalize_path(const char directory[], char buf[], size_t buf_size)
+ 
+ 	buf[0] = '\0';
+ 
+-#ifdef _WIN32
++#if defined(_WIN32) || defined(__CYGWIN__)
+ 	/* Handle first component of a UNC path. */
+ 	if(p[0] == '/' && p[1] == '/' && p[2] != '/')
+ 	{
 @@ -302,7 +302,7 @@ is_root_dir(const char *path)
  int
  is_unc_root(const char *path)
@@ -29,6 +76,28 @@ index 34b2d9876..35070884e 100644
  
  int
  is_unc_path(const char path[])
+diff --git vifm/tests/misc/canonical.c vifm/tests/misc/canonical.c
+index 9dc9124f5..a37d69a8a 100644
+--- vifm/tests/misc/canonical.c
++++ vifm/tests/misc/canonical.c
+@@ -59,7 +59,7 @@ excess_slashes(void)
+ {
+ 	char buf[PATH_MAX];
+ 
+-	canonicalize_path(ABS_PREFIX "//", buf, sizeof(buf));
++	canonicalize_path(ABS_PREFIX "///", buf, sizeof(buf));
+ 	assert_string_equal(ABS_PREFIX "/", buf);
+ 
+ 	canonicalize_path(ABS_PREFIX "/////////////", buf, sizeof(buf));
+@@ -77,7 +77,7 @@ complex_tests(void)
+ 	canonicalize_path(ABS_PREFIX "/a/./b/./.././c/../../.", buf, sizeof(buf));
+ 	assert_string_equal(ABS_PREFIX "/", buf);
+ 
+-	canonicalize_path(ABS_PREFIX "//a//./b/./../////./c///.././/", buf,
++	canonicalize_path(ABS_PREFIX "///a//./b/./../////./c///.././/", buf,
+ 			sizeof(buf));
+ 	assert_string_equal(ABS_PREFIX "/a/", buf);
+ }
 -- 
 2.31.1
 
