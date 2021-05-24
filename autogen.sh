@@ -12,6 +12,8 @@ LANG=C.UTF-8 bash -x
 	##### START SERVICES #####
 	# cygrunsrv -L | grep xinetd || bash <&22
 
+	export SITE=http://ftp.jaist.ac.jp/pub/cygwin
+	export SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2013/06/04/121035
 	export SITE=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2016/08/30/104223 
 	test -d x86/release &&
 	test -d noarch/release ||
