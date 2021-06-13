@@ -1,0 +1,4 @@
+category: doc
+requires: bash dwww swish++ doc-base httpd cron
+sdesc: "dwww and doc-base for cygwin"
+ldesc: "online documentation tool"
