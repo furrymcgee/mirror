@@ -1,0 +1,4 @@
+category: devel
+requires: make python3 debhelper make python3 dpkg-dev
+sdesc: "tool that converts source archives into Debian package source"
+ldesc: "tool that converts source archives into Debian package source"
