@@ -1,0 +1,25 @@
+# THIS IS A GENERATED CYGPORT FILE 
+NAME="dh-make"
+VERSION="2.202003"
+RELEASE=1
+CATEGORY="devel"
+SUMMARY="tool that converts source archives into Debian package source"
+DESCRIPTION=""
+HOMEPAGE="http://sourceware.org/cygwinports/"
+SRC_URI="http://ftp.debian.org/debian/pool/main/d/dh-make/dh-make_2.202003.dsc http://ftp.debian.org/debian/pool/main/d/dh-make/dh-make_2.202003.tar.xz"
+SRC_DIR="."
+PATCH_URI="dh-make.patch"
+DEBEMAIL="user@example.com"
+DEBFULLNAME="Firstname Lastname"
+# DEBUILD-DPKG-BUILDPACKAGE-OPTS="--force-sign --sign-key=0000000000000000"
+# DH-VERBOSE=1
+
+ARCH="noarch"
+
+# Build dependencies only
+DEPEND=""
+
+# runtime deps to go in setup.hint, and note the escaped newline
+REQUIRES="debhelper make python3 dpkg-dev"
+
+inherit dpkg

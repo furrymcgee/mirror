@@ -1,0 +1,18 @@
+--- dh-make-2.202003-1.noarch/src/dh-make/dh_make.py	2020-11-30 09:48:21.000000000 -0800
++++ /usr/bin/dh_make	2021-06-13 19:45:08.994657600 -0700
+@@ -7,7 +7,6 @@
+ import tty
+ from select import select
+ import pwd
+-import nis
+ import time
+ import re
+ from shutil import copy2
+@@ -403,6 +402,7 @@
+ 
+     # NIS/ypmatch
+     try:
++        import nis
+         username = nis.match(logname, 'passwd.byname').split(':')[4]
+         if username:
+             return username
