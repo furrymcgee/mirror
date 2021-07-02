@@ -1,12 +1,12 @@
-From 8ac33fc55e4727a71bc2c1d0c6c85ac86a209d23 Mon Sep 17 00:00:00 2001
+From e44a9bf691b34f7e281955698093028018f6c804 Mon Sep 17 00:00:00 2001
 From: furrymcgee <furrymcgee@lippydanger.jumpingcrab.com>
-Date: Tue, 13 Apr 2021 20:00:00 +0200
+Date: Thu, 2 Sep 2021 20:00:00 +0200
 Subject: [PATCH] index on (no branch): 3c337f9 1.13.4+nmu3
 
 ---
  common.mk                             |  40 +++---
  data/Makefile                         |   2 +-
- data/apache.conf                      |  18 ++-
+ data/apache.conf                      |  20 ++-
  data/dwww.css.in                      |   6 +-
  data/img/Makefile                     |   7 +-
  data/img/dwww.svg                     | 182 ++++++++++++++++++++++++++
@@ -25,17 +25,20 @@ Subject: [PATCH] index on (no branch): 3c337f9 1.13.4+nmu3
  data/templates/menu.nosections        |  14 +-
  data/templates/menu.single.start      |  14 +-
  debian/rules                          |   2 +-
- perl/Debian/Dwww/Common.pm            |  44 ++++---
+ perl/Debian/Dwww/Common.pm            |  46 ++++---
  perl/Debian/Dwww/Utils.pm             |  29 ++--
+ scripts/Makefile                      |   1 +
  scripts/dwww-build                    |   8 +-
  scripts/dwww-build-menu               |  11 +-
  scripts/dwww-find                     |   2 +-
  scripts/dwww-index++                  |  17 +--
- scripts/dwww-refresh-cache            |   4 +-
+ scripts/dwww-refresh-cache            |  10 +-
  scripts/dwww.cgi                      |  10 +-
+ scripts/dwww.dash                     |   2 +
  src/dwww-txt2html.c                   |   2 +-
- 30 files changed, 356 insertions(+), 175 deletions(-)
+ 32 files changed, 366 insertions(+), 178 deletions(-)
  create mode 100644 data/img/dwww.svg
+ create mode 100644 scripts/dwww.dash
 
 diff --git dwww/common.mk dwww/common.mk
 index 93af614..854c33b 100644
@@ -145,10 +148,10 @@ index aa2612a..b7eea0a 100644
 +	$(call install,$(etcdir)/dwww.conf,apache.conf,notdir)
  	$(call install,$(applicationsdir),dwww.desktop) 
 diff --git dwww/data/apache.conf dwww/data/apache.conf
-index 5965ace..dbe7624 100644
+index 5965ace..5da7b0f 100644
 --- dwww/data/apache.conf
 +++ dwww/data/apache.conf
-@@ -1,21 +1,27 @@
+@@ -1,21 +1,29 @@
  # Dwww configuration file for apache 2.4 or later
 +
 +# debian vendorlib
@@ -157,11 +160,13 @@ index 5965ace..dbe7624 100644
  <IfModule mod_alias.c>
  	Alias /dwww /var/www/dwww
 +	# symbolic links and aliases may be used to point to other locations.
-+	Alias /usr/local/share/doc /usr/local/share/doc
++	Alias /usr/share/doc /usr/share/doc
  </IfModule>
  
-+<Directory "/usr/local/share/doc">
-+	Require all granted
++<Directory "/usr/share/doc">
++	<IfModule mod_authz_host.c>
++		Require all granted
++	</IfModule>
 +</Directory>
 +
  <Directory "/var/www/dwww">
@@ -489,7 +494,7 @@ index efcd615..90fde79 100644
  #IncludeFile ID3	*.mp3
  IncludeFile LaTeX	*.tex
 diff --git dwww/data/templates/dwww-convert.dir.start dwww/data/templates/dwww-convert.dir.start
-index 176be2a..626eb95 100644
+index 176be2a..b1e17d4 100644
 --- dwww/data/templates/dwww-convert.dir.start
 +++ dwww/data/templates/dwww-convert.dir.start
 @@ -11,6 +11,8 @@
@@ -498,12 +503,12 @@ index 176be2a..626eb95 100644
   <!-- MENUADD -->
 - <div id="men"><p><a href="/dwww/">dwww Home</a>%MENUADD% | <a href="/cgi-bin/dwww?search=%FILEURL%&amp;searchtype=f">Find package</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
  <!-- end dwww-convert.dir.start -->
  
 diff --git dwww/data/templates/dwww-convert.start dwww/data/templates/dwww-convert.start
-index 97e2ac5..ea660c9 100644
+index 97e2ac5..bd1de8f 100644
 --- dwww/data/templates/dwww-convert.start
 +++ dwww/data/templates/dwww-convert.start
 @@ -11,6 +11,8 @@
@@ -512,12 +517,12 @@ index 97e2ac5..ea660c9 100644
   <!-- MENUADD -->
 - <div id="men"><p><a href="/dwww/">dwww Home</a>%MENUADD% | <a href="/cgi-bin/dwww?search=%FILEURL%&amp;searchtype=f">Find package</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
   <!-- end dwww-convert.start -->
  
 diff --git dwww/data/templates/dwww-find.start dwww/data/templates/dwww-find.start
-index 68c167a..f133cbd 100644
+index 68c167a..bc56b72 100644
 --- dwww/data/templates/dwww-find.start
 +++ dwww/data/templates/dwww-find.start
 @@ -10,16 +10,8 @@
@@ -536,12 +541,12 @@ index 68c167a..f133cbd 100644
 -  </p>
 - </form>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
  <!-- end dwww-find.start -->
  
 diff --git dwww/data/templates/dwww.template dwww/data/templates/dwww.template
-index e3c5cc7..20d7d4c 100644
+index e3c5cc7..ae73b2d 100644
 --- dwww/data/templates/dwww.template
 +++ dwww/data/templates/dwww.template
 @@ -7,30 +7,28 @@
@@ -557,7 +562,7 @@ index e3c5cc7..20d7d4c 100644
 - | <a href="/cgi-bin/info2www">GNU Info documents</a>
 - | <a href="/cgi-bin/dwww/usr/share/doc/?type=dir">/usr/share/doc folders</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </div>
   <form method="get" action="/cgi-bin/dwww" id="docsearch">
    <h3>Find documentation:</h3>
@@ -587,7 +592,7 @@ index e3c5cc7..20d7d4c 100644
  </html>
  <!-- end dwww.template -->
 diff --git dwww/data/templates/man-begins-with.start dwww/data/templates/man-begins-with.start
-index fa1b7af..21223dc 100644
+index fa1b7af..e141ee5 100644
 --- dwww/data/templates/man-begins-with.start
 +++ dwww/data/templates/man-begins-with.start
 @@ -10,15 +10,16 @@
@@ -596,7 +601,7 @@ index fa1b7af..21223dc 100644
   <div id="head"><h1>%TITLE% - Man pages starting with %LETTER%</h1></div>
 - <div id="men"><p><a href="/dwww/">dwww Home</a> | <a href="index.html#%HREFLETTER%">Man pages by name</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
   <form method="get" action="/cgi-bin/dwww">
    <p>
@@ -612,7 +617,7 @@ index fa1b7af..21223dc 100644
   </form>
   <!-- SECTIONS -->
 diff --git dwww/data/templates/man-in-section.start dwww/data/templates/man-in-section.start
-index 1f3e883..6d76f16 100644
+index 1f3e883..0d12119 100644
 --- dwww/data/templates/man-in-section.start
 +++ dwww/data/templates/man-in-section.start
 @@ -10,16 +10,17 @@
@@ -621,7 +626,7 @@ index 1f3e883..6d76f16 100644
   <div id="head"><h1>%TITLE%</h1></div>
 - <div id="men"><p><a href="/dwww/">dwww Home</a> | <a href="index.html#%HREFSECTION%">Man pages by section</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a> | <a href="index.html#%HREFSECTION%">Man pages by section</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="index.html#%HREFSECTION%">Manuals</a> <a href="/dwww/">Search</a> | 
 + </p></div>
   <h3>Man pages in section %SECTION%</h3>
   <form method="get" action="/cgi-bin/dwww">
@@ -638,7 +643,7 @@ index 1f3e883..6d76f16 100644
   </form>
   <!-- LETTERS -->
 diff --git dwww/data/templates/man-index.start dwww/data/templates/man-index.start
-index 36fa434..4c22396 100644
+index 36fa434..7b56537 100644
 --- dwww/data/templates/man-index.start
 +++ dwww/data/templates/man-index.start
 @@ -10,16 +10,17 @@
@@ -647,7 +652,7 @@ index 36fa434..4c22396 100644
   <div id="head"><h1>%TITLE% - Man pages</h1></div>
 - <div id="men"><p><a href="/dwww/">dwww Home</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a> | <a href="index.html#%HREFSECTION%">Man pages by section</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="index.html#%HREFSECTION%">Manuals</a> <a href="/dwww/">Search</a> | 
 + </p></div>
   <h3>Man pages index</h3>
   <form method="get" action="/cgi-bin/dwww">
@@ -664,7 +669,7 @@ index 36fa434..4c22396 100644
   </form>
   <h3>Manual pages</h3>
 diff --git dwww/data/templates/menu.all.start dwww/data/templates/menu.all.start
-index 03fd260..d7aedf6 100644
+index 03fd260..3e0abe6 100644
 --- dwww/data/templates/menu.all.start
 +++ dwww/data/templates/menu.all.start
 @@ -10,17 +10,9 @@
@@ -683,13 +688,13 @@ index 03fd260..d7aedf6 100644
 -  </p>
 - </form>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
   <table class="wide">
   <tr>
    <!-- SECTIONLIST -->
 diff --git dwww/data/templates/menu.errors.start dwww/data/templates/menu.errors.start
-index e5e5d0c..6de50a4 100644
+index e5e5d0c..7d0f611 100644
 --- dwww/data/templates/menu.errors.start
 +++ dwww/data/templates/menu.errors.start
 @@ -10,7 +10,9 @@
@@ -698,13 +703,13 @@ index e5e5d0c..6de50a4 100644
   <div id="head"><h1>%TITLE% - List of dwww errors/warnings</h1></div>
 - <div id="men"><p><a href="/dwww/">dwww Home</a> | <a href="/dwww/menu/">Each section in separate page</a></p></div>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
   <dl>
   <!-- end menu.errors.start -->
  
 diff --git dwww/data/templates/menu.nosections dwww/data/templates/menu.nosections
-index a3384a1..a7a452b 100644
+index a3384a1..b5e9b56 100644
 --- dwww/data/templates/menu.nosections
 +++ dwww/data/templates/menu.nosections
 @@ -10,16 +10,10 @@
@@ -722,14 +727,14 @@ index a3384a1..a7a452b 100644
 - </form>
 - <p class="c b">Debian Documentation Menu contains no documents.</p>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
 + <p class="c b">Documentation Menu contains no documents.</p>
   <p class="foot">Generated by <a href="/dwww/"><b>dwww</b></a> version %VERSION% on %DATE%.</p>
  </body>
  </html>
 diff --git dwww/data/templates/menu.single.start dwww/data/templates/menu.single.start
-index 1232b29..67be321 100644
+index 1232b29..6704106 100644
 --- dwww/data/templates/menu.single.start
 +++ dwww/data/templates/menu.single.start
 @@ -10,17 +10,9 @@
@@ -748,7 +753,7 @@ index 1232b29..67be321 100644
 -  </p>
 - </form>
 + <div id="men"><p>
-+  <a href="/dwww/">Search</a> | <a href="/dwww/menu/">Sections</a>
++  <a href="/dwww/menu/">Sections</a> | <a href="/dwww/">Search</a>
 + </p></div>
   <table class="wide">
    <tr>
@@ -764,7 +769,7 @@ index af85607..98d3013 100755
 -	dh "$@" --with apache2
 +	dh "$@"
 diff --git dwww/perl/Debian/Dwww/Common.pm dwww/perl/Debian/Dwww/Common.pm
-index 071948a..39ca115 100644
+index 071948a..229a36c 100644
 --- dwww/perl/Debian/Dwww/Common.pm
 +++ dwww/perl/Debian/Dwww/Common.pm
 @@ -7,6 +7,7 @@ package Debian::Dwww::Common;
@@ -828,11 +833,14 @@ index 071948a..39ca115 100644
          "search"        =>   "$dwww_url?search=",
          "dpkg"          =>   "/cgi-bin/dpkg?query=",
  
-@@ -57,7 +63,9 @@ sub GetURL{ # {{{
+@@ -56,8 +62,12 @@ sub GetURL{ # {{{
+ 
      if ($href{$format_name} =~ /#FILE#/) {
          return $` . $format_url . $';
-     } else {
--        return $href{$format_name} . $format_url;
+-    } else {
++    } elsif (defined $format_name) {
+         return $href{$format_name} . $format_url;
++    } else {
 +        die caller if $format_url =~ /^s.*\.html$/;
 +        local @_ = fileparse($format_url, keys %href);
 +        return join ':', $ENV{'HTTPS'} eq "on" ? "https" : "http", "//$ENV{'SERVER_NAME'}", "$ENV{'SERVER_PORT'}" . $_[1] . $_[0] . $_[2] . "\n\n"
@@ -896,6 +904,16 @@ index 05250ae..63445aa 100644
  
      exit 1; ### UNREACHED ###
  } # }}}
+diff --git dwww/scripts/Makefile dwww/scripts/Makefile
+index d4562db..5d62b25 100644
+--- dwww/scripts/Makefile
++++ dwww/scripts/Makefile
+@@ -29,4 +29,5 @@ install-local:
+ 	$(call install,$(bindir),$(binfiles),script)
+ 	$(call install,$(webcgidir)/dwww,dwww.cgi,notdir script)
+ 	$(call install,$(pkgsharedir),$(libfiles))
++	$(call install,/etc/postinstall,dwww.dash)
+ 
 diff --git dwww/scripts/dwww-build dwww/scripts/dwww-build
 index 5cc8a20..fd91b2b 100755
 --- dwww/scripts/dwww-build
@@ -1027,7 +1045,7 @@ index 1e49350..d181f07 100755
  &DwwwSetupDirs($dwwwconf);
  
 diff --git dwww/scripts/dwww-refresh-cache dwww/scripts/dwww-refresh-cache
-index 93cecfa..95e404b 100755
+index 93cecfa..f45bcd7 100755
 --- dwww/scripts/dwww-refresh-cache
 +++ dwww/scripts/dwww-refresh-cache
 @@ -5,8 +5,6 @@
@@ -1039,8 +1057,30 @@ index 93cecfa..95e404b 100755
  . /usr/share/dwww/functions.sh && dwww_initialize  || exit 1
  
  export PATH=.:$PATH
-@@ -42,7 +40,7 @@ if [ -n "$DWWW_KEEPDAYS" ] ; then
-                 -type f -print0 | xargs -0 rm -f
+@@ -21,7 +19,7 @@ echo -n "removing temporary files in cache dir..."
+ find "$dwww_cache_dir/" -maxdepth 1 \
+         -atime +2 \( -name '*.tmp.*' \
+         -o -name '[0-9]*.[0-9]*' \) \
+-        -type f -print0 | xargs -0 rm -f
++        -type f -print0 | xargs -0 -r rm -f
+ echo done
+ 
+ # remove temporary files, generated by dwww-build and dwww-build-menu
+@@ -29,7 +27,7 @@ echo -n "removing temporary files in temp dir..."
+ find "$DWWW_TMPDIR/" -maxdepth 1 \
+         -ctime +1 \( -name 'dwww-build.*' \
+         -o -name 'dwww-build-menu.*' \) \
+-        -type d -print0 | xargs -0 rm -rf
++        -type d -print0 | xargs -0 -r rm -rf
+ echo done
+ 
+ # remove accessed documents cache
+@@ -39,10 +37,10 @@ if [ -n "$DWWW_KEEPDAYS" ] ; then
+                  -atime +"$DWWW_KEEPDAYS" -name '[^.]*' \
+                 ! -name 'dwww.swish++.index' \
+                 ! -name '*.dat' \
+-                -type f -print0 | xargs -0 rm -f
++                -type f -print0 | xargs -0 -r rm -f
          echo done
  
 -        su -s /bin/sh "$DWWW_CGIUSER" -c '/usr/sbin/dwww-cache --clean' < /dev/null || true
@@ -1092,6 +1132,14 @@ index dc0a6e4..5962734 100755
  }
  
  else {
+diff --git dwww/scripts/dwww.dash dwww/scripts/dwww.dash
+new file mode 100644
+index 0000000..40c443a
+--- /dev/null
++++ dwww/scripts/dwww.dash
+@@ -0,0 +1,2 @@
++PATH=/usr/sbin/:$PATH PERL5LIB=/usr/share/perl5:/usr/lib/perl5/vendor_perl/5.22/i686-cygwin-threads-64int/Data /etc/cron.daily/dwww
++PATH=/usr/sbin/:$PATH PERL5LIB=/usr/share/perl5:/usr/lib/perl5/vendor_perl/5.22/i686-cygwin-threads-64int/Data /etc/cron.weekly/dwww
 diff --git dwww/src/dwww-txt2html.c dwww/src/dwww-txt2html.c
 index 2c6cd98..3afb4d3 100644
 --- dwww/src/dwww-txt2html.c
@@ -1106,5 +1154,5 @@ index 2c6cd98..3afb4d3 100644
  #include "utils.h"
  
 -- 
-2.20.1
+2.31.1
 
