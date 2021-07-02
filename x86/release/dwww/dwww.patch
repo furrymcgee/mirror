@@ -1,6 +1,6 @@
-From 8ac33fc55e4727a71bc2c1d0c6c85ac86a209d23 Mon Sep 17 00:00:00 2001
+From 28767bf19df237f981099dda6a2273991c01b880 Mon Sep 17 00:00:00 2001
 From: furrymcgee <furrymcgee@lippydanger.jumpingcrab.com>
-Date: Tue, 13 Apr 2021 20:00:00 +0200
+Date: Fri, 2 Jul 2021 20:00:00 +0200
 Subject: [PATCH] index on (no branch): 3c337f9 1.13.4+nmu3
 
 ---
@@ -145,7 +145,7 @@ index aa2612a..b7eea0a 100644
 +	$(call install,$(etcdir)/dwww.conf,apache.conf,notdir)
  	$(call install,$(applicationsdir),dwww.desktop) 
 diff --git dwww/data/apache.conf dwww/data/apache.conf
-index 5965ace..dbe7624 100644
+index 5965ace..f30c4fd 100644
 --- dwww/data/apache.conf
 +++ dwww/data/apache.conf
 @@ -1,21 +1,27 @@
@@ -157,10 +157,10 @@ index 5965ace..dbe7624 100644
  <IfModule mod_alias.c>
  	Alias /dwww /var/www/dwww
 +	# symbolic links and aliases may be used to point to other locations.
-+	Alias /usr/local/share/doc /usr/local/share/doc
++	Alias /usr/share/doc /usr/share/doc
  </IfModule>
  
-+<Directory "/usr/local/share/doc">
++<Directory "/usr/share/doc">
 +	Require all granted
 +</Directory>
 +
@@ -1106,5 +1106,5 @@ index 2c6cd98..3afb4d3 100644
  #include "utils.h"
  
 -- 
-2.20.1
+2.31.1
 
